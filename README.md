@@ -200,7 +200,7 @@ quiero conocer la siguiente información sobre las denuncias:
 - El apunte denunciado
 - El administrador que la revisó, si ya se ha revisado
 
-###### R.I.05. Información descargas
+##### R.I.05. Información descargas
 
 Como usuario,  
 quiero conocer la siguiente información sobre las descargas:   
@@ -208,7 +208,7 @@ quiero conocer la siguiente información sobre las descargas:
 - El usuario que descargó el apunte
 - El apunte descargado
 
-###### R.I.06. Información curso 
+##### R.I.06. Información curso 
 
 Como usuario,  
 quiero disponer de la siguiente información sobre los cursos:  
@@ -216,7 +216,7 @@ quiero disponer de la siguiente información sobre los cursos:
 - El nombre del curso
 - Las asignaturas que lo componen
 
-###### R.I.07. Información usuarios 
+##### R.I.07. Información usuarios 
 
 Como administrador,  
 quiero disponer de la siguiente información sobre los usuarios:  

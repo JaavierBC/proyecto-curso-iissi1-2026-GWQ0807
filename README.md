@@ -166,12 +166,6 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **quiero** consultar las denuncias pendientes de revisar junto con el apunte denunciado,  
 **para** moderar el contenido inadecuado.  
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
-
 #### 4.1.1. Requisitos de información
 
 ##### R.I.01. RI-01 Información apuntes
@@ -225,7 +219,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 - El usuario que descargó el apunte
 - El apunte descargado
 
-##### R.I.06. Información curso 
+##### R.I.06. Información cursos  
 
 **Como** usuario,  
 **quiero** disponer de la siguiente información sobre los cursos:  
@@ -241,11 +235,6 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 - El correo electrónico
 - La contraseña de acceso
 - Si el usuario es administrador
-
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
 
 #### 4.1.2. Reglas de negocio
 
@@ -309,11 +298,11 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 - Un usuario con 5 denuncias aceptadas sobre sus apuntes sube un apunte nuevo sin ningún tipo de problema.
 - Un usuario con 6 denuncias aceptadas intenta subir un apunte nuevo y recibe un mensaje de error.
 
-### 4.2. Mapa de historias de usuario (opcional)
+### 4.2. Mapa de historias de usuario  
 
 ![Mapa de usuarios](Assets/mapa_usuarios.jpeg)
 
-### 4.3. Requisitos no funcionales (opcional)
+### 4.3. Requisitos no funcionales  
 
 ##### R.N.F.01. Tiempo de respuesta en consultas de apuntes
 

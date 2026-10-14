@@ -1,4 +1,4 @@
-# Título Proyecto
+# ApuntUS
 
 ## Miembros del grupo L2-ABS-1
 
@@ -18,7 +18,7 @@ El cliente es el alumnado de la titulación, que ha presentado una queja formal 
 
 ### Situación actual
 
-El grado dispone de una web donde los estudiantes pueden subir apuntes, pero funciona sin ningún tipo de organización: todos los archivos se suben juntos, sin distinguir curso, asignatura ni tipo. Esto ha terminado ocasionando confusiones con los apuntes y un deterioro en el uso de la web.
+El grado dispone de una web donde los estudiantes pueden subir apuntes, pero funciona sin ningún tipo de organización: todos los archivos se suben juntos, sin distinguir curso, asignatura ni tipo. Esto ha terminado ocasionando confusiones con los apuntes y un deterioro en el uso de la web. La web funciona sobre un servidor de base de datos MariaDB
 
 ### Problemas detectados
 
@@ -48,33 +48,33 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 #### RG-01 Organizar los apuntes de la carrera
 
-Como usuario,  
-quiero encontrar los apuntes organizados por curso, asignatura y tipo,  
-para localizar rápidamente el material que necesito para estudiar. 
+**Como** usuario,  
+**quiero** encontrar los apuntes organizados por curso, asignatura y tipo,  
+**para** localizar rápidamente el material que necesito para estudiar. 
 
 #### RG-02 Compartir apuntes entre estudiantes
 
-Como usuario,  
-quiero subir mis apuntes y descargar los de otros compañeros,  
-para compartir el material y ahorrar tiempo de estudio. 
+**Como** usuario,  
+**quiero** subir mis apuntes y descargar los de otros compañeros,  
+**para** compartir el material y ahorrar tiempo de estudio. 
 
 #### RG-03 Valorar la calidad de los apuntes
 
-Como usuario,  
-quiero valorar los apuntes que he descargado y consultar las valoraciones de los demás,  
-para distinguir los apuntes de mayor calidad.  
+**Como** usuario,  
+**quiero** valorar los apuntes que he descargado y consultar las valoraciones de los demás,  
+**para** distinguir los apuntes de mayor calidad.  
 
 #### RG-04 Moderar el contenido de la plataforma
 
-Como administrador,  
-quiero controlar los apuntes denunciados y a los usuarios que incumplen las normas,  
-para mantener la calidad y la fiabilidad del contenido.  
+**Como** administrador,  
+**quiero** controlar los apuntes denunciados y a los usuarios que incumplen las normas,  
+**para** mantener la calidad y la fiabilidad del contenido.  
 
 #### RG-05 Garantizar un catálogo completo de apuntes
 
-Como administrador,  
-quiero asegurarme de que todas las asignaturas de la carrera disponen de material suficiente y variado,  
-para que los estudiantes tengan los recursos suficientes.  
+**Como** administrador,  
+**quiero** asegurarme de que todas las asignaturas de la carrera disponen de material suficiente y variado,  
+**para** que los estudiantes tengan los recursos suficientes.  
 
 ### 3.2. Usuarios del sistema
 
@@ -91,63 +91,63 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ##### R.F.01. Listado de asignaturas por curso
 
-Como usuario,  
-quiero consultar las asignaturas de cada curso de la carrera,  
-para encontrar rápidamente la asignatura que busco.  
+**Como** usuario,  
+**quiero** consultar las asignaturas de cada curso de la carrera,  
+**para** encontrar rápidamente la asignatura que busco.  
 
 ##### R.F.02. Listado de apuntes de una asignatura
 
-Como usuario,  
-quiero consultar los apuntes de una asignatura filtrándolos por tipo (teoría, ejercicios, exámenes...),  
-para acceder solo al material que necesito.  
+**Como** usuario,  
+**quiero** consultar los apuntes de una asignatura filtrándolos por tipo (teoría, ejercicios, exámenes...),  
+**para** acceder solo al material que necesito.  
 
 ##### R.F.03. Búsqueda de apuntes por palabra clave
 
-Como usuario,  
-quiero buscar apuntes por palabras del título, descripción o nombre del autor,  
-para encontrar material sin tener que navegar por todas las asignaturas.  
+**Como** usuario,  
+**quiero** buscar apuntes por palabras del título, descripción o nombre del autor,  
+**para** encontrar material sin tener que navegar por todas las asignaturas.  
 
 ##### R.F.04. Ordenación de los apuntes de una asignatura
 
-Como usuario,  
-quiero ordenar los apuntes de una asignatura según el criterio que elija (más recientes, más descargados o mejor valorados),  
-para encontrar antes el material que más me conviene.  
+**Como** usuario,  
+**quiero** ordenar los apuntes de una asignatura según el criterio que elija (más recientes, más descargados o mejor valorados),  
+**para** encontrar antes el material que más me conviene.  
 
 ##### R.F.05. Reseñas de un apunte
 
-Como usuario,  
-quiero consultar la valoración media y las reseñas de un apunte,  
-para decidir si merece la pena descargarlo.  
+**Como** usuario,  
+**quiero** consultar la valoración media y las reseñas de un apunte,  
+**para** decidir si merece la pena descargarlo.  
 
 ##### R.F.06. Apuntes subidos por un usuario
 
-Como usuario,  
-quiero consultar los apuntes que ha subido un usuario,  
-para encontrar más material de autores que me resultan fiables.  
+**Como** usuario,  
+**quiero** consultar los apuntes que ha subido un usuario,  
+**para** encontrar más material de autores que me resultan fiables.  
 
 ##### R.F.07. Historial de descargas
 
-Como usuario,  
-quiero consultar el listado de apuntes que me he descargado,  
-para volver a localizarlos fácilmente.  
+**Como** usuario,  
+**quiero** consultar el listado de apuntes que me he descargado,  
+**para** volver a localizarlos fácilmente.  
 
 ##### R.F.08. Denuncias aceptadas de un usuario
 
-Como administrador,  
-quiero consultar el número total de denuncias aceptadas que tiene un usuario,  
-para saber qué usuario está consistentemente rompiendo las normas.  
+**Como** administrador,  
+**quiero** consultar el número total de denuncias aceptadas que tiene un usuario,  
+**para** saber qué usuario está consistentemente rompiendo las normas.  
 
 ##### R.F.09. Estadísticas de una asignatura
 
-Como administrador,  
-quiero consultar cuántos apuntes tiene cada asignatura, desglosados por tipo,  
-para detectar asignaturas con poco material.  
+**Como** administrador,  
+**quiero** consultar cuántos apuntes tiene cada asignatura, desglosados por tipo,  
+**para** detectar asignaturas con poco material.  
 
 ##### R.F.10. Listado de denuncias pendientes
 
-Como administrador,  
-quiero consultar las denuncias pendientes de revisar junto con el apunte denunciado,  
-para moderar el contenido inadecuado.  
+**Como** administrador,  
+**quiero** consultar las denuncias pendientes de revisar junto con el apunte denunciado,  
+**para** moderar el contenido inadecuado.  
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
@@ -159,8 +159,8 @@ para moderar el contenido inadecuado.
 
 ##### R.I.01. RI-01 Información apuntes
 
-Como usuario,  
-quiero disponer de la siguiente información sobre los apuntes:
+**Como** usuario,  
+**quiero** disponer de la siguiente información sobre los apuntes:
 - El título del apunte 
 - Una descripción del apunte
 - El archivo del apunte
@@ -172,8 +172,8 @@ quiero disponer de la siguiente información sobre los apuntes:
 
 ##### R.I.02. Información asignaturas
 
-Como usuario,  
-quiero conocer esta información sobre las asignaturas: 
+**Como** usuario,  
+**quiero** conocer esta información sobre las asignaturas: 
 - El código que la identifica
 - El nombre de la asignatura
 - Los créditos asignados 
@@ -181,8 +181,8 @@ quiero conocer esta información sobre las asignaturas:
 
 ##### R.I.03. Información reseñas
 
-Como usuario,  
-quiero disponer de la siguiente información sobre las reseñas: 
+**Como** usuario,  
+**quiero** disponer de la siguiente información sobre las reseñas: 
 - La puntuación otorgada, un número entero entre 1 y 5
 - Opcionalmente, un comentario con las razones de la puntuación
 - La fecha en la que se escribió la reseña 
@@ -191,8 +191,8 @@ quiero disponer de la siguiente información sobre las reseñas:
 
 ##### R.I.04. Información denuncias 
 
-Como administrador,  
-quiero conocer la siguiente información sobre las denuncias:   
+**Como** administrador,  
+**quiero** conocer la siguiente información sobre las denuncias:   
 - El motivo por el que se presentó la denuncia
 - La fecha en que se realizó la denuncia
 - El estado de la denuncia: pendiente, aceptada o rechazada
@@ -202,24 +202,24 @@ quiero conocer la siguiente información sobre las denuncias:
 
 ##### R.I.05. Información descargas
 
-Como usuario,  
-quiero conocer la siguiente información sobre las descargas:   
+**Como** usuario,  
+**quiero** conocer la siguiente información sobre las descargas:   
 - La fecha en la que se hizo la descarga
 - El usuario que descargó el apunte
 - El apunte descargado
 
 ##### R.I.06. Información curso 
 
-Como usuario,  
-quiero disponer de la siguiente información sobre los cursos:  
+**Como** usuario,  
+**quiero** disponer de la siguiente información sobre los cursos:  
 - El número del curso 
 - El nombre del curso
 - Las asignaturas que lo componen
 
 ##### R.I.07. Información usuarios 
 
-Como administrador,  
-quiero disponer de la siguiente información sobre los usuarios:  
+**Como** administrador,  
+**quiero** disponer de la siguiente información sobre los usuarios:  
 - El nombre del usuario 
 - El correo electrónico
 - La contraseña de acceso
@@ -234,55 +234,55 @@ quiero disponer de la siguiente información sobre los usuarios:
 
 ##### R.N.01. Reseñas legítimas
 
-Como administrador,  
-quiero que solo pueda reseñar un apunte el usuario que lo haya descargado antes y que no sea su autor,  
-para que las reseñas provengan de quien realmente ha usado el material y evitar la autopromoción.  
-Pruebas de aceptación  
+**Como** administrador,  
+**quiero** que solo pueda reseñar un apunte el usuario que lo haya descargado antes y que no sea su autor,  
+**para** que las reseñas provengan de quien realmente ha usado el material y evitar la autopromoción.  
+**Pruebas de aceptación**  
 - Un usuario que ha descargado un apunte de otro autor escribe una reseña sobre él y la reseña es creada sin problemas.
 - Un usuario intenta reseñar un apunte que no ha descargado, o que él mismo subió, y recibe un mensaje de error.
 
 ##### R.N.02. Una reseña por usuario y apunte
 
-Como administrador,  
-quiero que un usuario solo pueda escribir una reseña por apunte,  
-para evitar que se manipule la valoración media.  
-Pruebas de aceptación  
+**Como** administrador,  
+**quiero** que un usuario solo pueda escribir una reseña por apunte,  
+**para** evitar que se manipule la valoración media.  
+**Pruebas de aceptación** 
 - Un usuario que no ha realizado una reseña previa sobre un apunte escribe una y se crea sin problemas.
 - Ese mismo usuario intenta escribir una segunda reseña sobre el mismo apunte y recibe un mensaje de error.
 
 ##### R.N.03. Denuncia única
 
-Como administrador,  
-quiero que un usuario solo pueda denunciar una vez un mismo apunte y que no pueda denunciar los apuntes que él mismo ha subido,  
-para evitar denuncias repetidas o malintencionadas.  
-Pruebas de aceptación  
+**Como** administrador,  
+**quiero** que un usuario solo pueda denunciar una vez un mismo apunte y que no pueda denunciar los apuntes que él mismo ha subido,  
+**para** evitar denuncias repetidas o malintencionadas.  
+**Pruebas de aceptación**  
 - Un usuario denuncia por primera vez un apunte de otro autor y la denuncia es creada sin problemas.
 - Un usuario intenta denunciar de nuevo un apunte que ya había denunciado, o un apunte que él mismo subió, y recibe un mensaje de error.
 
 ##### R.N.04. Ocultación por denuncias
 
-Como administrador,  
-quiero que un apunte se oculte automáticamente mientras tenga 10 o más denuncias pendientes de usuarios distintos,  
-para limitar el impacto de contenido inadecuado hasta que yo las revise.  
-Pruebas de aceptación  
+**Como** administrador,  
+**quiero** que un apunte se oculte automáticamente mientras tenga 10 o más denuncias pendientes de usuarios distintos,  
+**para** limitar el impacto de contenido inadecuado hasta que yo las revise.  
+**Pruebas de aceptación**  
 - Un apunte con 9 denuncias pendientes de usuarios distintos aparece en los listados y se puede descargar.
 - Un apunte con 10 denuncias pendientes de usuarios distintos deja de aparecer en los listados de los usuarios.
 
 ##### R.N.05. Eliminación de apuntes
 
-Como administrador,  
-quiero que solo el autor de un apunte o un administrador puedan eliminarlo,  
-para evitar que se borre material subido por otros usuarios.  
-Pruebas de aceptación  
+**Como** administrador,  
+**quiero** que solo el autor de un apunte o un administrador puedan eliminarlo,  
+**para** evitar que se borre material subido por otros usuarios.  
+**Pruebas de aceptación**  
 - El autor de un apunte, o un administrador, elimina el apunte y este deja de aparecer.
 - Un usuario que no es el autor ni administrador intenta eliminar un apunte ajeno y recibe un mensaje de error.
 
 ##### R.N.06. Límite de denuncias aceptadas
 
-Como administrador,  
-quiero que un usuario pueda tener un máximo de 5 denuncias aceptadas sobre sus apuntes, y que al superarlo no pueda subir más apuntes,  
-para evitar que usuarios reincidentes sigan publicando contenido inadecuado.  
-Pruebas de aceptación  
+**Como** administrador,  
+**quiero** que un usuario pueda tener un máximo de 5 denuncias aceptadas sobre sus apuntes, y que al superarlo no pueda subir más apuntes,  
+**para** evitar que usuarios reincidentes sigan publicando contenido inadecuado.  
+**Pruebas de aceptación**  
 - Un usuario con 5 denuncias aceptadas sobre sus apuntes sube un apunte nuevo sin ningún tipo de problema.
 - Un usuario con 6 denuncias aceptadas intenta subir un apunte nuevo y recibe un mensaje de error.
 
@@ -292,21 +292,21 @@ Pruebas de aceptación
 
 ##### R.N.F.01. Tiempo de respuesta en consultas de apuntes
 
-Como usuario,  
-quiero que las búsquedas y los listados de apuntes se muestren en menos de 3 segundos con hasta 500 usuarios concurrentes,  
-para no perder tiempo al buscar el material que necesito.  
+**Como** usuario,  
+**quiero** que las búsquedas y los listados de apuntes se muestren en menos de 3 segundos con hasta 500 usuarios concurrentes,  
+**para** no perder tiempo al buscar el material que necesito.  
 
 ##### R.N.F.02. Disponibilidad
 
-Como usuario,  
-quiero que la disponibilidad del sistema sea lo más cercana posible a 24/7,  
-para poder consultar los apuntes a cualquier hora, especialmente en época de exámenes.  
+**Como** usuario,  
+**quiero** que la disponibilidad del sistema sea lo más cercana posible a 24/7,  
+**para** poder consultar los apuntes a cualquier hora, especialmente en época de exámenes.  
 
-##### R.N.F.03. Contraseñas protegidas
+##### R.N.F.03. Base de datos MariaDB
 
-Como administrador,  
-quiero que las contraseñas de los usuarios se almacenen cifradas,  
-para proteger sus cuentas en caso de acceso no autorizado a los datos.  
+**Como** administrador,  
+**quiero** que el sistema renovado siga funcionando sobre el servidor de base de datos MariaDB que utiliza actualmente la web,
+**para** aprovechar la infraestructura existente y evitar migraciones innecesarias.
 
 -- fin entregable 1 --
 

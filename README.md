@@ -8,6 +8,8 @@
 
 ## 1. Introducción al problema
 
+![Titulo](Assets/Titulo.jpeg)
+
 ### Contexto
 
 El Grado en Ingeniería Informática – Ingeniería del Software de la Escuela Técnica Superior de Ingeniería Informática (ETSII) de la Universidad de Sevilla se organiza en cuatro cursos, cada uno con sus asignaturas. Los estudiantes están acostumbrados a utilizar ApuntUS, una web donde pueden subir y descargar apuntes de cada asignatura de la carrera.
@@ -40,7 +42,9 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 ## 2. Glosario de términos
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+|Término|Descripción|Imagen|
+|-------|-----------|------|
+|
 
 ## 3. Visión general del sistema
 
@@ -293,6 +297,8 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 - Un usuario con 6 denuncias aceptadas intenta subir un apunte nuevo y recibe un mensaje de error.
 
 ### 4.2. Mapa de historias de usuario (opcional)
+
+![Mapa de usuarios](Assets/mapa_usuarios.jpeg)
 
 ### 4.3. Requisitos no funcionales (opcional)
 

@@ -45,7 +45,9 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 |Término|Descripción|Imagen|
 |-------|-----------|------|
 |Año académico|Periodo lectivo en el que se elabora un apunte, expresado como dos años consecutivos (por ejemplo, 2025/26).|<img src="Assets/Calendario.jpg" width="200" height="200">|
+|-------|-----------|------|
 |Apuntes|Documento de estudio que un usuario sube a la plataforma, asociado a una asignatura.|<img src="Assets/Apuntes.png" width="200" height="200">|
+|-------|-----------|------|
 |Asignatura|Materia que se imparte en un curso del grado.|<img src="Assets/Asignatura.png" width="200" height="200">|
 |Autor|Usuario que ha subido un apunte a la plataforma.|<img src="Assets/Autor.png" width="200" height="200">|
 |Denuncia|Aviso que un usuario presenta contra un apunte que considera inadecuado.|<img src="Assets/Denuncia.png" width="200" height="200">|

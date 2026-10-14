@@ -44,7 +44,21 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 |Término|Descripción|Imagen|
 |-------|-----------|------|
+|Año académico|Periodo lectivo en el que se elabora un apunte, expresado como dos años consecutivos (por ejemplo, 2025/26).|<img src="Assets/Calendario.jpg" width="200" height="200">
 |
+|Apuntes|Documento de estudio que un usuario sube a la plataforma, asociado a una asignatura.|<img src="Assets/Apuntes.png" width="200" height="200">|
+|Asignatura|Materia que se imparte en un curso del grado.|<img src="Assets/Asignatura.png" width="200" height="200">|
+|Autor|Usuario que ha subido un apunte a la plataforma.|<img src="Assets/Autor.png" width="200" height="200">|
+|Denuncia|Aviso que un usuario presenta contra un apunte que considera inadecuado.|<img src="Assets/Denuncia.png" width="200" height="200">|
+|Descarga|Acción en la que un usuario obtiene el archivo de un apunte.|<img src="Assets/Descarga.png" width="200" height="200">|
+|ETSII|Escuela Técnica Superior de Ingeniería Informática de la Universidad de Sevilla, centro en el que se imparte el grado y para cuyo alumnado se desarrolla ApuntUS.|<img src="Assets/ETSII.png" width="200" height="200">|
+|MariaDB|Sistema gestor de bases de datos sobre el que funciona la web.|<img src="Assets/MariaDB.png" width="200" height="200">|
+|Moderación|Conjunto de tareas para mantener el contenido de la plataforma en buen estado.|<img src="Assets/Moderacion.png" width="200" height="200">|
+|Ocultación|Situación en la que un apunte deja de aparecer en los listados y no puede descargarse.|<img src="Assets/Ocultacion.png" width="200" height="200">|
+|Reseña|Valoración que un usuario escribe sobre un apunte que ha descargado.|<img src="Assets/Reseña.png" width="200" height="200">|
+|Valoración media|Media de las puntuaciones de las reseñas de un apunte.|<img src="Assets/Valoracionmedia.png" width="200" height="200">|
+|Veto|Restricción que impide a un usuario subir nuevos apuntes.|<img src="Assets/veto.png" width="200" height="200">|
+|Wuolah|Plataforma de intercambio de apuntes entre universitarios que sirve de referencia al proyecto.|<img src="Assets/Wuolah.png" width="200" height="200">|
 
 ## 3. Visión general del sistema
 

@@ -237,6 +237,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **Como** administrador,  
 **quiero** que solo pueda reseñar un apunte el usuario que lo haya descargado antes y que no sea su autor,  
 **para** que las reseñas provengan de quien realmente ha usado el material y evitar la autopromoción.  
+
 **Pruebas de aceptación**  
 - Un usuario que ha descargado un apunte de otro autor escribe una reseña sobre él y la reseña es creada sin problemas.
 - Un usuario intenta reseñar un apunte que no ha descargado, o que él mismo subió, y recibe un mensaje de error.
@@ -246,6 +247,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **Como** administrador,  
 **quiero** que un usuario solo pueda escribir una reseña por apunte,  
 **para** evitar que se manipule la valoración media.  
+
 **Pruebas de aceptación** 
 - Un usuario que no ha realizado una reseña previa sobre un apunte escribe una y se crea sin problemas.
 - Ese mismo usuario intenta escribir una segunda reseña sobre el mismo apunte y recibe un mensaje de error.
@@ -255,6 +257,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **Como** administrador,  
 **quiero** que un usuario solo pueda denunciar una vez un mismo apunte y que no pueda denunciar los apuntes que él mismo ha subido,  
 **para** evitar denuncias repetidas o malintencionadas.  
+
 **Pruebas de aceptación**  
 - Un usuario denuncia por primera vez un apunte de otro autor y la denuncia es creada sin problemas.
 - Un usuario intenta denunciar de nuevo un apunte que ya había denunciado, o un apunte que él mismo subió, y recibe un mensaje de error.
@@ -264,6 +267,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **Como** administrador,  
 **quiero** que un apunte se oculte automáticamente mientras tenga 10 o más denuncias pendientes de usuarios distintos,  
 **para** limitar el impacto de contenido inadecuado hasta que yo las revise.  
+
 **Pruebas de aceptación**  
 - Un apunte con 9 denuncias pendientes de usuarios distintos aparece en los listados y se puede descargar.
 - Un apunte con 10 denuncias pendientes de usuarios distintos deja de aparecer en los listados de los usuarios.
@@ -273,6 +277,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **Como** administrador,  
 **quiero** que solo el autor de un apunte o un administrador puedan eliminarlo,  
 **para** evitar que se borre material subido por otros usuarios.  
+
 **Pruebas de aceptación**  
 - El autor de un apunte, o un administrador, elimina el apunte y este deja de aparecer.
 - Un usuario que no es el autor ni administrador intenta eliminar un apunte ajeno y recibe un mensaje de error.
@@ -282,6 +287,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **Como** administrador,  
 **quiero** que un usuario pueda tener un máximo de 5 denuncias aceptadas sobre sus apuntes, y que al superarlo no pueda subir más apuntes,  
 **para** evitar que usuarios reincidentes sigan publicando contenido inadecuado.  
+
 **Pruebas de aceptación**  
 - Un usuario con 5 denuncias aceptadas sobre sus apuntes sube un apunte nuevo sin ningún tipo de problema.
 - Un usuario con 6 denuncias aceptadas intenta subir un apunte nuevo y recibe un mensaje de error.

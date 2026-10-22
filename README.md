@@ -61,32 +61,20 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 #### RG-01 Organizar los apuntes de la carrera
 
 **Como** usuario,  
-**quiero** encontrar los apuntes organizados por curso, asignatura y tipo,  
-**para** localizar rápidamente el material que necesito para estudiar. 
+**quiero** encontrar, subir y descargar apuntes organizados por curso, asignatura y tipo, y que todas las asignaturas dispongan de material suficiente y variado,  
+**para** compartir material de estudio y localizar rápidamente el que necesito. 
 
-#### RG-02 Compartir apuntes entre estudiantes
-
-**Como** usuario,  
-**quiero** subir mis apuntes y descargar los de otros compañeros,  
-**para** compartir el material y ahorrar tiempo de estudio. 
-
-#### RG-03 Valorar la calidad de los apuntes
+#### RG-02 Valorar la calidad de los apuntes
 
 **Como** usuario,  
 **quiero** valorar los apuntes que he descargado y consultar las valoraciones de los demás,  
 **para** distinguir los apuntes de mayor calidad.  
 
-#### RG-04 Moderar el contenido de la plataforma
+#### RG-03 Moderar el contenido de la plataforma
 
 **Como** administrador,  
 **quiero** controlar los apuntes denunciados y a los usuarios que incumplen las normas,  
 **para** mantener la calidad y la fiabilidad del contenido.  
-
-#### RG-05 Garantizar un catálogo completo de apuntes
-
-**Como** administrador,  
-**quiero** asegurarme de que todas las asignaturas de la carrera disponen de material suficiente y variado,  
-**para** que los estudiantes tengan los recursos suficientes.  
 
 ### 3.2. Usuarios del sistema
 
@@ -295,7 +283,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ### 4.2. Mapa de historias de usuario  
 
-![Mapa de usuarios](Assets/mapa_usuarios.jpeg)
+![Mapa de usuarios](Assets/Mapa_Historias_Usuario.png)
 
 ### 4.3. Requisitos no funcionales  
 

@@ -58,7 +58,7 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 ### 3.1. Requisitos generales
 
-#### RG-01 Organizar los apuntes de la carrera
+#### RG-01 Gestionar el catálogo de apuntes
 
 **Como** usuario,  
 **quiero** encontrar, subir y descargar apuntes organizados por curso, asignatura y tipo, y que todas las asignaturas dispongan de material suficiente y variado,  

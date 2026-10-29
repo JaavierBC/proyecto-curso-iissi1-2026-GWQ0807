@@ -347,17 +347,48 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
+- Requisitos Informacion
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
+|       | Usuario   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
 |:------|:-----------|:-----------|:-----------|:-----------|
 | RI-1  | X          | X          | X          | X          |
 | RI-2  |            | X          |            | X          |
+| RI-3  |            | X          |            | X          |
+| RI-4  |            | X          |            | X          |
+| RI-5  |            | X          |            | X          |
+| RI-6  |            | X          |            | X          |
+| RI-7  |            | X          |            | X          |
+
+
+- Requisitos Funcionales
+
+|       | Usuario   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
+|:------|:-----------|:-----------|:-----------|:-----------|
 | RF-1  |            | X          |            | X          |
 | RF-2  | X          |            | X          | X          |
+| RF-3  | X          |            | X          | X          |
+| RF-4  | X          |            | X          | X          |
+| RF-5  | X          |            | X          | X          |
+| RF-6  | X          |            | X          | X          |
+| RF-7  | X          |            | X          | X          |
+| RF-8  | X          |            | X          | X          |
+| RF-9  | X          |            | X          | X          |
+| RF-10  | X          |            | X          | X          |
+
+
+
+
+- Reglas Negocio
+
+|       | Usuario   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
+|:------|:-----------|:-----------|:-----------|:-----------|
 | RN-1  |            | X          |            |            |
 | RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+| RN-3  | X          | X          | X          |            |
+| RN-4  | X          | X          | X          |            |
+| RN-5  | X          | X          | X          |            |
+| RN-6  | X          | X          | X          |            |
+
 
 -- fin entregable 2 --
 

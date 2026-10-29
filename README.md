@@ -46,16 +46,11 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 |-------|-----------|------|
 |Año académico|Periodo lectivo en el que se elabora un apunte, expresado como dos años consecutivos (por ejemplo, 2025/26).|<img src="Assets/Calendario.jpg" width="200" height="200">|
 |Apuntes|Documento de estudio que un usuario sube a la plataforma, asociado a una asignatura.|<img src="Assets/Apuntes.png" width="200" height="200">|
-|Asignatura|Materia que se imparte en un curso del grado.|<img src="Assets/Asignatura.png" width="200" height="200">|
-|Autor|Usuario que ha subido un apunte a la plataforma.|<img src="Assets/Autor.png" width="200" height="200">|
 |Denuncia|Aviso que un usuario presenta contra un apunte que considera inadecuado.|<img src="Assets/Denuncia.png" width="200" height="200">|
-|Descarga|Acción en la que un usuario obtiene el archivo de un apunte.|<img src="Assets/Descarga.png" width="200" height="200">|
-|ETSII|Escuela Técnica Superior de Ingeniería Informática de la Universidad de Sevilla, centro en el que se imparte el grado y para cuyo alumnado se desarrolla ApuntUS.|<img src="Assets/ETSII.png" width="200" height="200">|
 |MariaDB|Sistema gestor de bases de datos sobre el que funciona la web.|<img src="Assets/MariaDB.png" width="200" height="200">|
 |Moderación|Conjunto de tareas para mantener el contenido de la plataforma en buen estado.|<img src="Assets/Moderacion.png" width="200" height="200">|
 |Ocultación|Situación en la que un apunte deja de aparecer en los listados y no puede descargarse.|<img src="Assets/Ocultacion.png" width="200" height="200">|
 |Reseña|Valoración que un usuario escribe sobre un apunte que ha descargado.|<img src="Assets/Reseña.png" width="200" height="200">|
-|Valoración media|Media de las puntuaciones de las reseñas de un apunte.|<img src="Assets/Valoracionmedia.png" width="200" height="200">|
 |Veto|Restricción que impide a un usuario subir nuevos apuntes.|<img src="Assets/veto.png" width="200" height="200">|
 |Wuolah|Plataforma de intercambio de apuntes entre universitarios que sirve de referencia al proyecto.|<img src="Assets/Wuolah.png" width="200" height="200">|
 
@@ -63,35 +58,23 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 ### 3.1. Requisitos generales
 
-#### RG-01 Organizar los apuntes de la carrera
+#### RG-01 Gestionar el catálogo de apuntes
 
 **Como** usuario,  
-**quiero** encontrar los apuntes organizados por curso, asignatura y tipo,  
-**para** localizar rápidamente el material que necesito para estudiar. 
+**quiero** encontrar, subir y descargar apuntes organizados por curso, asignatura y tipo, y que todas las asignaturas dispongan de material suficiente y variado,  
+**para** compartir material de estudio y localizar rápidamente el que necesito. 
 
-#### RG-02 Compartir apuntes entre estudiantes
-
-**Como** usuario,  
-**quiero** subir mis apuntes y descargar los de otros compañeros,  
-**para** compartir el material y ahorrar tiempo de estudio. 
-
-#### RG-03 Valorar la calidad de los apuntes
+#### RG-02 Valorar la calidad de los apuntes
 
 **Como** usuario,  
 **quiero** valorar los apuntes que he descargado y consultar las valoraciones de los demás,  
 **para** distinguir los apuntes de mayor calidad.  
 
-#### RG-04 Moderar el contenido de la plataforma
+#### RG-03 Moderar el contenido de la plataforma
 
 **Como** administrador,  
 **quiero** controlar los apuntes denunciados y a los usuarios que incumplen las normas,  
 **para** mantener la calidad y la fiabilidad del contenido.  
-
-#### RG-05 Garantizar un catálogo completo de apuntes
-
-**Como** administrador,  
-**quiero** asegurarme de que todas las asignaturas de la carrera disponen de material suficiente y variado,  
-**para** que los estudiantes tengan los recursos suficientes.  
 
 ### 3.2. Usuarios del sistema
 
@@ -166,12 +149,6 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 **quiero** consultar las denuncias pendientes de revisar junto con el apunte denunciado,  
 **para** moderar el contenido inadecuado.  
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
-
 #### 4.1.1. Requisitos de información
 
 ##### R.I.01. RI-01 Información apuntes
@@ -225,7 +202,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 - El usuario que descargó el apunte
 - El apunte descargado
 
-##### R.I.06. Información curso 
+##### R.I.06. Información cursos  
 
 **Como** usuario,  
 **quiero** disponer de la siguiente información sobre los cursos:  
@@ -241,11 +218,6 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 - El correo electrónico
 - La contraseña de acceso
 - Si el usuario es administrador
-
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
 
 #### 4.1.2. Reglas de negocio
 
@@ -309,11 +281,11 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 - Un usuario con 5 denuncias aceptadas sobre sus apuntes sube un apunte nuevo sin ningún tipo de problema.
 - Un usuario con 6 denuncias aceptadas intenta subir un apunte nuevo y recibe un mensaje de error.
 
-### 4.2. Mapa de historias de usuario (opcional)
+### 4.2. Mapa de historias de usuario  
 
-![Mapa de usuarios](Assets/mapa_usuarios.jpeg)
+![Mapa de usuarios](Assets/Mapa_Historias_Usuario.png)
 
-### 4.3. Requisitos no funcionales (opcional)
+### 4.3. Requisitos no funcionales  
 
 ##### R.N.F.01. Tiempo de respuesta en consultas de apuntes
 

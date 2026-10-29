@@ -311,7 +311,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+![Modelo Conceptual](Assets/Modelo_Conceptual_ApuntUS.png)
 
 ### 5.2. Escenarios de prueba
 

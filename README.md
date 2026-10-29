@@ -16,11 +16,11 @@ El Grado en Ingeniería Informática – Ingeniería del Software de la Escuela 
 
 ### Clientes y Usuarios
 
-El cliente es el alumnado de la titulación, que ha presentado una queja formal debido a la mala organización de la web. Los usuarios son los estudiantes del grado, que necesitan encontrar material fiable con el que apoyarse en sus estudios, y compartir sus propios apuntes, además de un grupo de administración responsable de gestionar la web y asegurar que el contenido en ella es útil y adecuado.
+El cliente es el alumnado de la titulación, que ha presentado una queja formal debido a la mala organización de la web. Los usuarios son los estudiantes del grado, que necesitan encontrar material fiable con el que apoyarse en sus estudios y compartir sus propios apuntes. Algunos de ellos actúan como moderadores, encargados de revisar el contenido, y además existe una administración responsable de gestionar la plataforma.
 
 ### Situación actual
 
-El grado dispone de una web donde los estudiantes pueden subir apuntes, pero funciona sin ningún tipo de organización: todos los archivos se suben juntos, sin distinguir curso, asignatura ni tipo. Esto ha terminado ocasionando confusiones con los apuntes y un deterioro en el uso de la web. La web funciona sobre un servidor de base de datos MariaDB
+El grado dispone de una web donde los estudiantes pueden subir apuntes, pero funciona sin ningún tipo de organización: todos los archivos se suben juntos, sin distinguir curso, asignatura ni tipo. Esto ha terminado ocasionando confusiones con los apuntes y un deterioro en el uso de la web. La web funciona sobre un servidor de base de datos MariaDB.
 
 ### Problemas detectados
 
@@ -35,7 +35,7 @@ Por demanda estudiantil, se quiere realizar una renovación completa de la web, 
 
 - Clasificar los apuntes por curso, asignatura y tipo, y buscarlos y ordenarlos por fecha, descargas o valoración.
 - Que los estudiantes puedan valorar y comprobar la calidad de los apuntes con un sistema de reseñas de 1 a 5 estrellas.
-- Denunciar apuntes inadecuados, para que el administrador los revise y se impida subir apuntes a los usuarios reincidentes.
+- Denunciar apuntes inadecuados, para que un moderador los revise y se impida subir apuntes a los usuarios reincidentes.
 - Que el administrador detecte las asignaturas con poco material para promover la subida de apuntes en aquellas que tengan mayor escasez.
 
 Con ello se pretende que la web deje de estar completamente desorganizada y se convierta en una herramienta fiable y fácil de usar en la que se fomente la colaboración entre estudiantes, y que estos la utilicen para ahorrar tiempo y mejorar en los estudios.
@@ -44,7 +44,7 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 |Término|Descripción|Imagen|
 |-------|-----------|------|
-|Año académico|Periodo lectivo en el que se elabora un apunte, expresado como dos años consecutivos (por ejemplo, 2025/26).|<img src="Assets/Calendario.jpg" width="200" height="200">|
+|Año académico|Periodo lectivo en el que se elabora un apunte, expresado como dos años consecutivos (por ejemplo, 2026/27).|<img src="Assets/Calendario.jpg" width="200" height="200">|
 |Apuntes|Documento de estudio que un usuario sube a la plataforma, asociado a una asignatura.|<img src="Assets/Apuntes.png" width="200" height="200">|
 |Denuncia|Aviso que un usuario presenta contra un apunte que considera inadecuado.|<img src="Assets/Denuncia.png" width="200" height="200">|
 |MariaDB|Sistema gestor de bases de datos sobre el que funciona la web.|<img src="Assets/MariaDB.png" width="200" height="200">|
@@ -72,7 +72,7 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 #### RG-03 Moderar el contenido de la plataforma
 
-**Como** administrador,  
+**Como** moderador,  
 **quiero** controlar los apuntes denunciados y a los usuarios que incumplen las normas,  
 **para** mantener la calidad y la fiabilidad del contenido.  
 
@@ -82,9 +82,14 @@ Con ello se pretende que la web deje de estar completamente desorganizada y se c
 
 Es cualquier estudiante registrado en la plataforma. Puede consultar y buscar apuntes, ver las reseñas de estos, subir los suyos y eliminarlos, descargar los de otros compañeros, escribir reseñas y denunciar apuntes inadecuados. También puede consultar su historial de descargas y los apuntes subidos por otros autores.
 
+#### Moderador
+
+Es un usuario con permisos de moderación, por lo que puede hacer todo lo que hace un usuario. Además, revisa las denuncias y decide si se aceptan o se rechazan, consulta las denuncias aceptadas de cada usuario para detectar a los reincidentes, y puede eliminar apuntes de cualquier autor. Es el responsable de mantener el contenido de la plataforma en buen estado.
+
 #### Administrador
 
-Es un usuario con permisos de moderación, por lo que puede hacer todo lo que hace un usuario. Además, revisa las denuncias y decide si se aceptan o se rechazan, puede eliminar apuntes de cualquier autor y consultar información de gestión, como el número de apuntes de cada asignatura por tipo o las denuncias aceptadas de un usuario.
+Es el responsable de la gestión de la plataforma. No es un usuario que suba o descargue apuntes, sino que consulta información de gestión, como el número de apuntes de cada asignatura por tipo o la actividad de los moderadores. Además, gestiona las cuentas de la plataforma, entre ellas las de los moderadores.
+
 ## 4. Catálogo de requisitos
 
 ### 4.1. Requisitos funcionales
@@ -133,97 +138,112 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ##### R.F.08. Denuncias aceptadas de un usuario
 
-**Como** administrador,  
+**Como** moderador,  
 **quiero** consultar el número total de denuncias aceptadas que tiene un usuario,  
 **para** saber qué usuario está consistentemente rompiendo las normas.  
 
-##### R.F.09. Estadísticas de una asignatura
+##### R.F.09. Listado de denuncias pendientes
+
+**Como** moderador,  
+**quiero** consultar las denuncias pendientes de revisar junto con el apunte denunciado,  
+**para** moderar el contenido inadecuado.  
+
+##### R.F.10. Estadísticas de una asignatura
 
 **Como** administrador,  
 **quiero** consultar cuántos apuntes tiene cada asignatura, desglosados por tipo,  
 **para** detectar asignaturas con poco material.  
 
-##### R.F.10. Listado de denuncias pendientes
+##### R.F.11. Listado de moderadores
 
 **Como** administrador,  
-**quiero** consultar las denuncias pendientes de revisar junto con el apunte denunciado,  
-**para** moderar el contenido inadecuado.  
+**quiero** consultar el listado de moderadores junto con su fecha de nombramiento y el número de denuncias que ha revisado cada uno,  
+**para** supervisar la actividad de moderación de la plataforma.  
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. RI-01 Información apuntes
+##### R.I.01. Información apuntes
 
 **Como** usuario,  
-**quiero** disponer de la siguiente información sobre los apuntes:
-- El título del apunte 
-- Una descripción del apunte
-- El archivo del apunte
-- La fecha en la que se subió
-- El año académico (por ejemplo, 2026/27) en el que se elaboró el apunte
-- El tipo del apunte: teoría, ejercicios, prácticas, exámenes o trabajos
-- La asignatura a la que pertenece
-- El usuario que lo subió
+**quiero** disponer de la siguiente información sobre los apuntes:  
+- El título del apunte  
+- Una descripción del apunte  
+- El archivo del apunte  
+- La fecha en la que se subió  
+- El año académico (por ejemplo, 2026/27) en el que se elaboró el apunte  
+- El tipo del apunte: teoría, ejercicios, prácticas, exámenes o trabajos  
+- La asignatura a la que pertenece  
+- El usuario que lo subió  
 
 ##### R.I.02. Información asignaturas
 
 **Como** usuario,  
-**quiero** conocer esta información sobre las asignaturas: 
-- El código que la identifica
-- El nombre de la asignatura
-- Los créditos asignados 
-- El curso al que pertenece
+**quiero** conocer esta información sobre las asignaturas:  
+- El código que la identifica  
+- El nombre de la asignatura  
+- Los créditos asignados  
+- El curso al que pertenece  
 
 ##### R.I.03. Información reseñas
 
 **Como** usuario,  
-**quiero** disponer de la siguiente información sobre las reseñas: 
-- La puntuación otorgada, un número entero entre 1 y 5
-- Opcionalmente, un comentario con las razones de la puntuación
-- La fecha en la que se escribió la reseña 
-- El usuario que la escribió
+**quiero** disponer de la siguiente información sobre las reseñas:  
+- La puntuación otorgada, un número entero entre 1 y 5  
+- Opcionalmente, un comentario con las razones de la puntuación  
+- La fecha en la que se escribió la reseña  
+- El usuario que la escribió  
 - El apunte reseñado
 
 ##### R.I.04. Información denuncias 
 
-**Como** administrador,  
+**Como** moderador,  
 **quiero** conocer la siguiente información sobre las denuncias:   
-- El motivo por el que se presentó la denuncia
-- La fecha en que se realizó la denuncia
-- El estado de la denuncia: pendiente, aceptada o rechazada
-- El usuario que la presentó
-- El apunte denunciado
-- El administrador que la revisó, si ya se ha revisado
+- El motivo por el que se presentó la denuncia  
+- La fecha en que se realizó la denuncia  
+- El estado de la denuncia: pendiente, aceptada o rechazada  
+- El usuario que la presentó  
+- El apunte denunciado  
+- El moderador que la revisó, si ya se ha revisado  
 
 ##### R.I.05. Información descargas
 
 **Como** usuario,  
 **quiero** conocer la siguiente información sobre las descargas:   
-- La fecha en la que se hizo la descarga
-- El usuario que descargó el apunte
-- El apunte descargado
+- La fecha en la que se hizo la descarga  
+- El usuario que descargó el apunte  
+- El apunte descargado  
 
 ##### R.I.06. Información cursos  
 
 **Como** usuario,  
 **quiero** disponer de la siguiente información sobre los cursos:  
-- El número del curso 
-- El nombre del curso
-- Las asignaturas que lo componen
+- El número del curso  
+- El nombre del curso  
+- Las asignaturas que lo componen  
 
 ##### R.I.07. Información usuarios 
 
 **Como** administrador,  
 **quiero** disponer de la siguiente información sobre los usuarios:  
-- El nombre del usuario 
-- El correo electrónico
-- La contraseña de acceso
-- Si el usuario es administrador
+- El nombre del usuario  
+- El correo electrónico  
+- La contraseña de acceso  
+- El tipo de cuenta: usuario, moderador o administrador  
+
+##### R.I.08. Información moderadores
+
+**Como** administrador,  
+**quiero** conocer la siguiente información sobre los moderadores:  
+
+- El usuario que ejerce como moderador  
+- La fecha en la que fue nombrado moderador  
+- Las denuncias que ha revisado  
 
 #### 4.1.2. Reglas de negocio
 
 ##### R.N.01. Reseñas legítimas
 
-**Como** administrador,  
+**Como** moderador,  
 **quiero** que solo pueda reseñar un apunte el usuario que lo haya descargado antes y que no sea su autor,  
 **para** que las reseñas provengan de quien realmente ha usado el material y evitar la autopromoción.  
 
@@ -233,7 +253,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ##### R.N.02. Una reseña por usuario y apunte
 
-**Como** administrador,  
+**Como** moderador,  
 **quiero** que un usuario solo pueda escribir una reseña por apunte,  
 **para** evitar que se manipule la valoración media.  
 
@@ -243,7 +263,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ##### R.N.03. Denuncia única
 
-**Como** administrador,  
+**Como** moderador,  
 **quiero** que un usuario solo pueda denunciar una vez un mismo apunte y que no pueda denunciar los apuntes que él mismo ha subido,  
 **para** evitar denuncias repetidas o malintencionadas.  
 
@@ -253,7 +273,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ##### R.N.04. Ocultación por denuncias
 
-**Como** administrador,  
+**Como** moderador,  
 **quiero** que un apunte se oculte automáticamente mientras tenga 10 o más denuncias pendientes de usuarios distintos,  
 **para** limitar el impacto de contenido inadecuado hasta que yo las revise.  
 
@@ -263,13 +283,13 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 
 ##### R.N.05. Eliminación de apuntes
 
-**Como** administrador,  
-**quiero** que solo el autor de un apunte o un administrador puedan eliminarlo,  
+**Como** moderador,  
+**quiero** que solo el autor de un apunte o un moderador puedan eliminarlo,  
 **para** evitar que se borre material subido por otros usuarios.  
 
 **Pruebas de aceptación**  
-- El autor de un apunte, o un administrador, elimina el apunte y este deja de aparecer.
-- Un usuario que no es el autor ni administrador intenta eliminar un apunte ajeno y recibe un mensaje de error.
+- El autor de un apunte, o un moderador, elimina el apunte y este deja de aparecer.
+- Un usuario que no es el autor ni moderador intenta eliminar un apunte ajeno y recibe un mensaje de error.
 
 ##### R.N.06. Límite de denuncias aceptadas
 
@@ -302,7 +322,7 @@ Es un usuario con permisos de moderación, por lo que puede hacer todo lo que ha
 ##### R.N.F.03. Base de datos MariaDB
 
 **Como** administrador,  
-**quiero** que el sistema renovado siga funcionando sobre el servidor de base de datos MariaDB que utiliza actualmente la web,
+**quiero** que el sistema renovado siga funcionando sobre el servidor de base de datos MariaDB que utiliza actualmente la web,  
 **para** aprovechar la infraestructura existente y evitar migraciones innecesarias.
 
 -- fin entregable 1 --

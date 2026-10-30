@@ -410,6 +410,8 @@ classDiagram
     r1 -- a2
     d1 -- a2
 
+
+
     note  for r2 "No se istancia la reseña debiod a la restrición de maximo una reseña per usuario por cada apunte"
 
 ```

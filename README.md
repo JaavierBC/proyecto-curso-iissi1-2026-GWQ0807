@@ -339,27 +339,27 @@ Para validar el modelo , se definen estos escenarios de pruebas con sus diagrams
 
 ### ESCENARIO DE PRUEBA EP-01: Subida de apuntes 
 
-Objectivo: Comprobar que un usuario puede subir apuntes, verificando que el sistema lo permite al tener meno de seis denuncias aceptadas.
+Objectivo: Comprobar que un usuario puede subir apuntes, verificando que el sistema lo permite al tener menos de seis denuncias aceptadas.
 
-Descripción textual: El usuario Tommaso que no tiene ninguna denuncia, con correo tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte modelo_conceptual.pdf con el titulo "Modelo conceptual" que son apuntes de teoria de IISSI1. Los apuntes son de este año 2026. El sistema valida que Tommaso no tiene mas de cinqo denuncias y permite la subida.  
+Descripción textual: El usuario Tommaso, que no tiene ninguna denuncia, con email tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte tema5_iissi1.pdf con el título "Modelo Conceptual", que son apuntes de teoria de IISSI1. Los apuntes son de este año 2026. El sistema valida que Tommaso no tiene mas de cinco denuncias y permite la subida.  
 
 Objectos involucrados: 
-- u1: Usuario (nombre="Tommaso", correo="tommaso.rossi@gmail.com", contraseña="tommi2026)
-- a1: Apunte (título="Modelo conceptual", descripción="apuntes de tema 5 del apartado de Sistemas de información", fechaSubida="2026-10-30", archivo= , añoAcadémico="2026-2027", TipoApunte="TEORÍA")
+- u1: Usuario (nombre="Tommaso", email="tommaso.rossi@gmail.com", contraseña="tommi2026)
+- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes de tema 5 de IISSI1, apartado de Sistemas de información", fechaSubida="2026-10-30", archivo=tema5_iissi1.pdf , añoAcadémico="2026/27", tipo="TEORÍA")
 ```mermaid
 classDiagram
     class u1["<u>u1 : Usuario</u>"]{
         nombre = "Tommaso"
-        correo = "tommaso.rossi@gmail.com"
+        email = "tommaso.rossi@gmail.com"
         contraseña = "tommi2026"
     }
     class a1["<u>a1 : Apunte</u>"]{
         título = "Modelo conceptual"
-        descripción = "apuntes de tema 5 del apartado de Sistemas de información"
+        descripción = "Apuntes de tema 5 de IISSI1, apartado de Sistemas de información"
         fechaSubida = "2026-10-30"
-        archivo = "modelo_conceptual.pdf"
-        añoAcademico="2026-2027"
-        TipoApunte = "TEORÍA" 
+        archivo = "tema5_iissi1.pdf"
+        añoAcademico = "2026/27"
+        tipo = "TEORÍA" 
     }
     u1 -- a1
 ```

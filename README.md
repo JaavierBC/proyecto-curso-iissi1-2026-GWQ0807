@@ -380,7 +380,7 @@ Objectivo: Comprobar que un usuario no puede subir una reseña, si ya ha hecho u
 Descripción textual: El usuario Sofia el domingo 25 de octubre 2025 he descargado  el apunte k_mapa.pdf con el titulo "K-mapa" que son apuntes de ejercicios de Análisis y diseño de Circuitos Combinacionales del 2 de octubre del año pasado con una valoración media de 4. despues de una semana de estudio el domingo 1 de noviembre 2025 había dejado una valoración de 5 y, tras aprobar el examen, el 3 de noviembre quiso dejar otra reseña para animar a otros usuarios a utilizar esos apunte. Il sistema rechazó la acción ya que ya había dejado una reseña.
 
 Objectos involucrados: 
-- u1: Usuario (nombre="Sofia", correo="sofia.han@mail.com", contraseña="sofii")
+- u1: Usuario (nombre="Sofia", email="sofia.han@mail.com", contraseña="sofii")
 - r1: Reseña (puntuación=5,comentario="muy buenos apuntes de ejercicios de CED", fecha="2025-11-01")
 - r2: Reseña (puntuación = 5, comentario="he aprobado el examen gracias a estos apuntes", fecha="2025-10-07")
 - d1: Descarga (fecha="2025-10-25")
@@ -390,7 +390,7 @@ Objectos involucrados:
 classDiagram
     class u2["<u>u2 : Usuario</u>"]{
         nombre = "Sofia"
-        correo = "sofia.han@mail.com"
+        email = "sofia.han@mail.com"
         contraseña = "sofii"
     }
     class r1["<u>r1 : Reseña</u>"]{

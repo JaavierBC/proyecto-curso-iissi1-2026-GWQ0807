@@ -217,8 +217,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 **Como** usuario,  
 **quiero** disponer de la siguiente información sobre los cursos:  
-- El número del curso  
-- El nombre del curso  
+- El curso: primero, segundo, tercero o cuarto   
 - Las asignaturas que lo componen  
 
 ##### R.I.07. Información usuarios 

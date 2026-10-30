@@ -335,13 +335,13 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 ### 5.2. Escenarios de prueba
 
-Para validar el modelo , se definen estos escenarios de pruebas con sus diagrams de objectos 
+Para validar el modelo, se definen estos escenarios de prueba con sus diagramas de objetos 
 
 ### ESCENARIO DE PRUEBA EP-01: Subida de apuntes 
 
-Objectivo: Comprobar que un usuario puede subir apuntes, verificando que el sistema lo permite al tener menos de seis denuncias aceptadas.
+Objetivo: Comprobar que un usuario puede subir apuntes, verificando que el sistema lo permite al tener menos de seis denuncias aceptadas.
 
-Descripción textual: El usuario Tommaso, que no tiene ninguna denuncia, con email tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte tema5_iissi1.pdf con el título "Modelo Conceptual", que son apuntes de teoria de IISSI1. Los apuntes son de este año 2026. El sistema valida que Tommaso no tiene mas de cinco denuncias y permite la subida.  
+Descripción textual: El usuario Tommaso, que no tiene ninguna denuncia, con email tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte "tema5_iissi1.pdf" con el título "Modelo Conceptual", que son apuntes de teoría de IISSI1. Los apuntes son de este año 2026. El sistema valida que Tommaso no tiene mas de cinco denuncias y permite la subida.  
 
 Objectos involucrados: 
 - u1: Usuario (nombre="Tommaso", email="tommaso.rossi@gmail.com", contraseña="tommi2026)
@@ -358,8 +358,8 @@ classDiagram
         descripción = "Apuntes de tema 5 de IISSI1, apartado de Sistemas de información"
         fechaSubida = "2026-10-30"
         archivo = "tema5_iissi1.pdf"
-        añoAcademico = "2026/27"
-        tipo = "TEORÍA" 
+        añoAcadémico = "2026/27"
+        tipo = TEORÍA 
     }
     u1 -- a1
 ```

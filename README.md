@@ -361,7 +361,17 @@ classDiagram
         añoAcadémico = "2026/27"
         tipo = TEORÍA 
     }
+    class as1["<u>as1 : Asignatura</u>"]{
+        código = 2050046
+        nombre = "Introdución a la ingeniería del Software y los Sistemas de información"
+        créditos = 6
+    }
+    class c1["<u>c1 : Curso</u>"]{
+        nombre = "SEGUNDO"
+    }
     u1 -- a1
+    a1 -- as1
+    as1 -- c1
 ```
 ### ESCENARIO DE PRUEBA EP-02 : Subida de apuntes 
 

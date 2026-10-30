@@ -341,12 +341,11 @@ ESCENARIO DE PRUEBA EP-01: Subida de apuntes
 
 Objectivo: Comprobar que un usuario puede subir apuntes, verificando que el sistema lo permite al tener meno de seis denuncias aceptadas.
 
-Descripción textual: El usuario Tommaso que no tiene ninguna denuncia, con correo tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte modelo_conceptual.pdf con el titulo "Modelo conceptual" que son apuntes de teoria de la asignatura "Introdución a la Ingeniería del Software y los Sistemas de información I" con codigo 2050046 y 6 creditos. Los apuntes son de este año 2026. El sistema valida que Tommaso no tiene mas de cinqo denuncias y permite la subida.  
+Descripción textual: El usuario Tommaso que no tiene ninguna denuncia, con correo tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte modelo_conceptual.pdf con el titulo "Modelo conceptual" que son apuntes de teoria de IISSI1. Los apuntes son de este año 2026. El sistema valida que Tommaso no tiene mas de cinqo denuncias y permite la subida.  
 
 Objectos involucrados: 
 - u1: Usuario (nombre="Tommaso", correo="tommaso.rossi@gmail.com", contraseña="tommi2026)
 - a1: Apunte (título="Modelo conceptual", descripción="apuntes de tema 5 del apartado de Sistemas de información", fechaSubida="2026-10-30", archivo= , añoAcadémico="2026-2027", TipoApunte="TEORÍA")
-- as1: Asignatura (código=2050046, nombre="Introdución a la ingeniería del Software y los Sistemas de información", créditos=6)
 ```mermaid
 classDiagram
     class u1["<u>u1 : Usuario</u>"]{
@@ -362,13 +361,7 @@ classDiagram
         añoAcademico="2026-2027"
         TipoApunte = "TEORÍA" 
     }
-    class as1["<u>as1 : Asignatura</u>"]{
-        código = 2050046
-        nombre = "Introdución a la ingeniería del Software y los Sistemas de información"
-        créditos = 6
-    }
     u1 -- a1
-    a1 -- as1
 ```
 ## 6. Matrices de trazabilidad
 

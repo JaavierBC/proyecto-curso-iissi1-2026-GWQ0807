@@ -412,7 +412,8 @@ classDiagram
 
     %%nota
     note "No se istancia la reseña debiod a la restrición de maximo una reseña per usuario por cada apunte" as N
-    N-->r2
+
+    N..r2
 
 ```
 

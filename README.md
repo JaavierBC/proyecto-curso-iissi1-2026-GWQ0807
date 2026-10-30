@@ -335,7 +335,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 ### 5.2. Escenarios de prueba
 
-Para validar el modelo, se definen estos escenarios de prueba con sus diagramas de objetos 
+Para validar el modelo, se definen estos escenarios de prueba con sus diagramas de objetos:   
 
 ### ESCENARIO DE PRUEBA EP-01: Subida de apuntes 
 
@@ -345,7 +345,9 @@ Descripción textual: El usuario Tommaso, que no tiene ninguna denuncia, con ema
 
 Objectos involucrados: 
 - u1: Usuario (nombre="Tommaso", email="tommaso.rossi@gmail.com", contraseña="tommi2026)
-- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes de tema 5 de IISSI1, apartado de Sistemas de información", fechaSubida="2026-10-30", archivo=tema5_iissi1.pdf , añoAcadémico="2026/27", tipo="TEORÍA", valoraciónMedia = full)
+- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes del Tema 5 de IISSI1, apartado de Sistemas de Información", fechaSubida="2026-10-30", archivo=tema5_iissi1.pdf , añoAcadémico="2026/27", tipo=TEORÍA, valoraciónMedia = full)  
+- as1: Asignatura (código=2050018, nombre="IISSI1", créditos=6)
+- c1: Curso (nombre=SEGUNDO)
 ```mermaid
 classDiagram
     class u1["<u>u1 : Usuario</u>"]{
@@ -354,8 +356,8 @@ classDiagram
         contraseña = "tommi2026"
     }
     class a1["<u>a1 : Apunte</u>"]{
-        título = "Modelo conceptual"
-        descripción = "Apuntes de tema 5 de IISSI1, apartado de Sistemas de información"
+        título = "Modelo Conceptual"
+        descripción = "Apuntes del Tema 5 de IISSI1, apartado de Sistemas de Información"
         fechaSubida = "2026-10-30"
         archivo = "tema5_iissi1.pdf"
         añoAcadémico = "2026/27"
@@ -364,11 +366,11 @@ classDiagram
     }
     class as1["<u>as1 : Asignatura</u>"]{
         código = 2050046
-        nombre = "Introdución a la ingeniería del Software y los Sistemas de información"
+        nombre = "IISSI1"
         créditos = 6
     }
     class c1["<u>c1 : Curso</u>"]{
-        nombre = "SEGUNDO"
+        nombre = SEGUNDO
     }
     u1 -- a1
     a1 -- as1

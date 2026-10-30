@@ -411,9 +411,8 @@ classDiagram
     d1 -- a2
 
 
-    note "No se istancia la reseña debiod a la restrición de maximo una reseña per usuario por cada apunte" as N
+    note "No se istancia la reseña debiod a la restrición de maximo una reseña per usuario por cada apunte"
 
-    N..r2
 
 ```
 ## 6. Matrices de trazabilidad

@@ -374,7 +374,7 @@ classDiagram
     a1 -- as1
     as1 -- c1
 ```
-### ESCENARIO DE PRUEBA EP-02 : Subida de apuntes 
+### ESCENARIO DE PRUEBA EP-02 : Creación de reseña duplicada 
 
 Objectivo: Comprobar que un usuario no puede subir una reseña, si ya ha hecho una reseña sobre el mismo apunte.
 

@@ -345,7 +345,7 @@ Descripción textual: El usuario Tommaso, que no tiene ninguna denuncia, con ema
 
 Objectos involucrados: 
 - u1: Usuario (nombre="Tommaso", email="tommaso.rossi@gmail.com", contraseña="tommi2026)
-- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes de tema 5 de IISSI1, apartado de Sistemas de información", fechaSubida="2026-10-30", archivo=tema5_iissi1.pdf , añoAcadémico="2026/27", tipo="TEORÍA")
+- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes de tema 5 de IISSI1, apartado de Sistemas de información", fechaSubida="2026-10-30", archivo=tema5_iissi1.pdf , añoAcadémico="2026/27", tipo="TEORÍA", valoraciónMedia = full)
 ```mermaid
 classDiagram
     class u1["<u>u1 : Usuario</u>"]{
@@ -359,7 +359,8 @@ classDiagram
         fechaSubida = "2026-10-30"
         archivo = "tema5_iissi1.pdf"
         añoAcadémico = "2026/27"
-        tipo = TEORÍA 
+        tipo = TEORÍA
+        valoraciónMedia = full
     }
     class as1["<u>as1 : Asignatura</u>"]{
         código = 2050046

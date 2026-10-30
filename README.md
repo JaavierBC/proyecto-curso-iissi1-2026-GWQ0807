@@ -406,17 +406,16 @@ classDiagram
     }
     u2 -- r1
     u2 -- d1
-    u2 ..> r2: X intento Bloqueado (RN-02)
+    u2 ..> r2 : X intento Bloqueado (RN-02)
     r1 -- a2
     d1 -- a2
 
-    %%nota
+
     note "No se istancia la reseña debiod a la restrición de maximo una reseña per usuario por cada apunte" as N
 
     N..r2
 
 ```
-
 ## 6. Matrices de trazabilidad
 
 - Requisitos Informacion

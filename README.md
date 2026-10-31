@@ -334,7 +334,44 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+Para validar el modelo, se definen estos escenarios de prueba con sus diagramas de objetos:   
+
+### ESCENARIO DE PRUEBA EP-01: Subida de apuntes con denuncias previas
+
+Objetivo: Comprobar que un usuario con denuncias aceptadas por debajo del límite (RN-06) puede subir apuntes.
+
+Descripción textual: El usuario Tommaso subió el 5 de octubre de 2026 el apunte "Ejercicios de SQL" a la asignatura IISSI1 de segundo curso. Los usuarios Elena y Marco denunciaron ese apunte los días 12 y 14 de octubre, y la moderadora Laura aceptó las dos denuncias. El viernes 30 de octubre de 2026, Tommaso accede a ApuntUS y sube su apunte "Modelo Conceptual", de teoría, a la misma asignatura. El sistema comprueba que Tommaso tiene 2 denuncias aceptadas, que no supera el máximo de 5, y permite la subida.
+
+Objetos involucrados:
+- u1: Usuario (nombre="Tommaso", email="tommaso.rossi@gmail.com", contraseña="tommi2026")
+- u2: Usuario (nombre="Elena", email="elena.ruiz@gmail.com", contraseña="elena2026")
+- u3: Usuario (nombre="Marco", email="marco.gil@gmail.com", contraseña="marco2026")
+- m1: Moderador (nombre="Laura", email="laura.perez@gmail.com", contraseña="laura2026", fechaNombramiento="2026-09-01")
+- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes del Tema 5 de IISSI1, apartado de Sistemas de Información", fechaSubida="2026-10-30", archivo="tema5_iissi1.pdf", añoAcadémico="2026/27", tipo=TEORÍA)
+- a2: Apunte (título="Ejercicios de SQL", descripción="Ejercicios resueltos de la relación de SQL", fechaSubida="2026-10-05", archivo="ejercicios_sql.pdf", añoAcadémico="2026/27", tipo=EJERCICIOS)
+- d1: Denuncia (motivo="Contiene errores en las soluciones", fecha="2026-10-12", estado=ACEPTADA)
+- d2: Denuncia (motivo="Parte del material está copiado de otro autor", fecha="2026-10-14", estado=ACEPTADA)
+- as1: Asignatura (código=2050018, nombre="IISSI1", créditos=6)
+- c1: Curso (nombre=SEGUNDO)
+
+![EP-01_Diagrama_de_objetos](Assets/EP-01_Diagrama_de_objetos.png)
+
+### ESCENARIO DE PRUEBA EP-02: Reseña duplicada
+
+Objetivo: Comprobar que un usuario no puede escribir una segunda reseña sobre un apunte que ya ha reseñado (RN-02).
+
+Descripción textual: El apunte "K-mapa", de ejercicios de Circuitos Electrónicos Digitales, asignatura de segundo, fue subido por el usuario Marco el 2 de octubre de 2026. La usuaria Sofía lo descarga el domingo 25 de octubre de 2026 y, tras una semana de estudio, escribe el domingo 1 de noviembre de 2026 una reseña de 5 estrellas. Tras aprobar el examen, el martes 3 de noviembre de 2026 intenta escribir otra reseña sobre el mismo apunte para animar a otros usuarios a utilizarlo. El sistema rechaza la acción porque Sofía ya había reseñado ese apunte.
+
+Objetos involucrados:
+- u1: Usuario (nombre="Sofía", email="sofia.han@gmail.com", contraseña="sofii")
+- u2: Usuario (nombre="Marco", email="marco.gil@gmail.com", contraseña="marco2026")
+- a1: Apunte (título="K-mapa", descripción="Apuntes de ejercicios de Circuitos Electrónicos Digitales", fechaSubida="2026-10-02", archivo="k_mapa.pdf", añoAcadémico="2026/27", tipo=EJERCICIOS)
+- d1: Descarga (fecha="2026-10-25")
+- r1: Reseña (puntuación=5, comentario="Muy buenos apuntes de ejercicios de CED", fecha="2026-11-01")
+- as1: Asignatura (código=2050003, nombre="Circuitos Electrónicos Digitales", créditos=6)
+- c1: Curso (nombre=PRIMERO)
+
+![EP-02_Diagrama_de_objetos](Assets/EP-02_Diagrama_de_objetos.png)
 
 ## 6. Matrices de trazabilidad
 

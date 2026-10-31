@@ -337,7 +337,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 Para validar el modelo, se definen estos escenarios de prueba con sus diagramas de objetos:   
 
-ESCENARIO DE PRUEBA EP-01: Subida de apuntes con denuncias previas
+### ESCENARIO DE PRUEBA EP-01: Subida de apuntes con denuncias previas
 
 Objetivo: Comprobar que un usuario con denuncias aceptadas por debajo del límite (RN-06) puede subir apuntes.
 

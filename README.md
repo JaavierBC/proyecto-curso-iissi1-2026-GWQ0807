@@ -341,12 +341,12 @@ Para validar el modelo, se definen estos escenarios de prueba con sus diagramas 
 
 Objetivo: Comprobar que un usuario puede subir apuntes, verificando que el sistema lo permite al tener menos de seis denuncias aceptadas.
 
-Descripción textual: El usuario Tommaso, que no tiene ninguna denuncia, con email tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte "tema5_iissi1.pdf" con el título "Modelo Conceptual", que son apuntes de teoría de IISSI1. Los apuntes son de este año 2026. El sistema valida que Tommaso no tiene mas de cinco denuncias y permite la subida.  
+Descripción textual: El usuario Tommaso, que no tiene ninguna denuncia, con email tommaso.rossi@gmail.com y contraseña tommi2026 acede a ApuntUS el viernes 30 de octubre y sube su apunte "tema5_iissi1.pdf" con el título "Modelo Conceptual", que son apuntes de teoría de IISSI1, asignatura de segundo. Los apuntes pertenecen al año académico 2026/27. El sistema valida que Tommaso no tiene más de cinco denuncias y permite la subida.  
 
 Objectos involucrados: 
 - u1: Usuario (nombre="Tommaso", email="tommaso.rossi@gmail.com", contraseña="tommi2026)
-- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes del Tema 5 de IISSI1, apartado de Sistemas de Información", fechaSubida="2026-10-30", archivo=tema5_iissi1.pdf , añoAcadémico="2026/27", tipo=TEORÍA, valoraciónMedia = full)  
-- as1: Asignatura (código=2050018, nombre="IISSI1", créditos=6)
+- a1: Apunte (título="Modelo Conceptual", descripción="Apuntes del Tema 5 de IISSI1, apartado de Sistemas de Información", fechaSubida="2026-10-30", archivo="tema5_iissi1.pdf", añoAcadémico="2026/27", tipo=TEORÍA)  
+- as1: Asignatura (código=2050046, nombre="IISSI1", créditos=6)
 - c1: Curso (nombre=SEGUNDO)
 ```mermaid
 classDiagram
@@ -362,7 +362,6 @@ classDiagram
         archivo = "tema5_iissi1.pdf"
         añoAcadémico = "2026/27"
         tipo = TEORÍA
-        valoraciónMedia = full
     }
     class as1["<u>as1 : Asignatura</u>"]{
         código = 2050046
@@ -372,9 +371,9 @@ classDiagram
     class c1["<u>c1 : Curso</u>"]{
         nombre = SEGUNDO
     }
-    u1 -- a1
-    a1 -- as1
-    as1 -- c1
+    u1 -- a1 : sube
+    a1 <-- as1 : tiene
+    as1 <-- c1 : contiene
 ```
 ### ESCENARIO DE PRUEBA EP-02 : Creación de reseña duplicada 
 

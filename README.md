@@ -379,11 +379,11 @@ classDiagram
 
 Objetivo: Comprobar que un usuario no puede escribir una segunda reseña sobre un apunte que ya ha reseñado (RN-02).
 
-Descripción textual: El apunte "K-mapa", de ejercicios de la asignatura Circuitos Electrónicos Digitales (primer curso), fue subido por el usuario Marco el 2 de octubre de 2026. La usuaria Sofía lo descarga el domingo 25 de octubre de 2026 y, tras una semana de estudio, escribe el domingo 1 de noviembre de 2026 una reseña de 5 estrellas. Tras aprobar el examen, el martes 3 de noviembre de 2026 intenta escribir otra reseña sobre el mismo apunte para animar a otros usuarios a utilizarlo. El sistema rechaza la acción porque Sofía ya había reseñado ese apunte.
+Descripción textual: El apunte "K-mapa", de ejercicios de Circuitos Electrónicos Digitales, asignatura de segundo, fue subido por el usuario Marco el 2 de octubre de 2026. La usuaria Sofía lo descarga el domingo 25 de octubre de 2026 y, tras una semana de estudio, escribe el domingo 1 de noviembre de 2026 una reseña de 5 estrellas. Tras aprobar el examen, el martes 3 de noviembre de 2026 intenta escribir otra reseña sobre el mismo apunte para animar a otros usuarios a utilizarlo. El sistema rechaza la acción porque Sofía ya había reseñado ese apunte.
 
 Objetos involucrados:
-- u1: Usuario (nombre="Sofía", email="sofia.han@mail.com", contraseña="sofii")
-- u2: Usuario (nombre="Marco", email="marco.gil@mail.com", contraseña="marco2026")
+- u1: Usuario (nombre="Sofía", email="sofia.han@gmail.com", contraseña="sofii")
+- u2: Usuario (nombre="Marco", email="marco.gil@gmail.com", contraseña="marco2026")
 - a1: Apunte (título="K-mapa", descripción="Apuntes de ejercicios de Circuitos Electrónicos Digitales", fechaSubida="2026-10-02", archivo="k_mapa.pdf", añoAcadémico="2026/27", tipo=EJERCICIOS)
 - d1: Descarga (fecha="2026-10-25")
 - r1: Reseña (puntuación=5, comentario="Muy buenos apuntes de ejercicios de CED", fecha="2026-11-01")
@@ -395,12 +395,12 @@ classDiagram
     direction TB
     class u2["<u>u2 : Usuario</u>"]{
         nombre = "Marco"
-        email = "marco.gil@mail.com"
+        email = "marco.gil@gmail.com"
         contraseña = "marco2026"
     }
     class u1["<u>u1 : Usuario</u>"]{
         nombre = "Sofía"
-        email = "sofia.han@mail.com"
+        email = "sofia.han@gmail.com"
         contraseña = "sofii"
     }
     class a1["<u>a1 : Apunte</u>"]{
@@ -429,8 +429,8 @@ classDiagram
     }
 
     u2 -- a1 : sube
-    u1 -- d1 : descarga
-    d1 -- a1 : descarga
+    u1 -- a1 : descarga
+    d1 .. u1
     u1 -- r1 : escribe
     r1 -- a1 : valora
     as1 -- a1 : tiene

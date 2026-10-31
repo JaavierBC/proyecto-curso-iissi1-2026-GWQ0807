@@ -436,7 +436,7 @@ classDiagram
     as1 -- a1 : tiene
     c1 -- as1 : contiene
 
-    note "El 3 de noviembre de 2026 Sofía intenta escribir una segunda reseña sobre a1. No se crea por la RN-02."
+    note for r1 "El 3 de noviembre de 2026 Sofía intenta escribir una segunda reseña sobre a1. No se crea por la RN-02."
 ```
 ## 6. Matrices de trazabilidad
 

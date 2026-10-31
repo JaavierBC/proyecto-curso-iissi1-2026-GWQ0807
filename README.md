@@ -375,57 +375,68 @@ classDiagram
     a1 <-- as1 : tiene
     as1 <-- c1 : contiene
 ```
-### ESCENARIO DE PRUEBA EP-02 : Creación de reseña duplicada 
+### ESCENARIO DE PRUEBA EP-02: Reseña duplicada
 
-Objectivo: Comprobar que un usuario no puede subir una reseña, si ya ha hecho una reseña sobre el mismo apunte.
+Objetivo: Comprobar que un usuario no puede escribir una segunda reseña sobre un apunte que ya ha reseñado (RN-02).
 
-Descripción textual: El usuario Sofia el domingo 25 de octubre 2025 he descargado  el apunte k_mapa.pdf con el titulo "K-mapa" que son apuntes de ejercicios de Análisis y diseño de Circuitos Combinacionales del 2 de octubre del año pasado con una valoración media de 4. despues de una semana de estudio el domingo 1 de noviembre 2025 había dejado una valoración de 5 y, tras aprobar el examen, el 3 de noviembre quiso dejar otra reseña para animar a otros usuarios a utilizar esos apunte. Il sistema rechazó la acción ya que ya había dejado una reseña.
+Descripción textual: El apunte "K-mapa", de ejercicios de la asignatura Circuitos Electrónicos Digitales (primer curso), fue subido por el usuario Marco el 2 de octubre de 2026. La usuaria Sofía lo descarga el domingo 25 de octubre de 2026 y, tras una semana de estudio, escribe el domingo 1 de noviembre de 2026 una reseña de 5 estrellas. Tras aprobar el examen, el martes 3 de noviembre de 2026 intenta escribir otra reseña sobre el mismo apunte para animar a otros usuarios a utilizarlo. El sistema rechaza la acción porque Sofía ya había reseñado ese apunte.
 
-Objectos involucrados: 
-- u1: Usuario (nombre="Sofia", email="sofia.han@mail.com", contraseña="sofii")
-- r1: Reseña (puntuación=5,comentario="muy buenos apuntes de ejercicios de CED", fecha="2025-11-01")
-- r2: Reseña (puntuación = 5, comentario="he aprobado el examen gracias a estos apuntes", fecha="2025-10-07")
-- d1: Descarga (fecha="2025-10-25")
-- a1: Apunte (título="K-mapa", descripción="apuntes de Análisis y diseño de Circuitos Combinacionales", fechaSubida="2025-10-02", archivo="k_mapa.pdf", añoAcadémico="2025-2026", TipoApunte="EJERCICIOS", valoraciónMedia = 4)
+Objetos involucrados:
+- u1: Usuario (nombre="Sofía", email="sofia.han@mail.com", contraseña="sofii")
+- u2: Usuario (nombre="Marco", email="marco.gil@mail.com", contraseña="marco2026")
+- a1: Apunte (título="K-mapa", descripción="Apuntes de ejercicios de Circuitos Electrónicos Digitales", fechaSubida="2026-10-02", archivo="k_mapa.pdf", añoAcadémico="2026/27", tipo=EJERCICIOS)
+- d1: Descarga (fecha="2026-10-25")
+- r1: Reseña (puntuación=5, comentario="Muy buenos apuntes de ejercicios de CED", fecha="2026-11-01")
+- as1: Asignatura (código=2050003, nombre="Circuitos Electrónicos Digitales", créditos=6)
+- c1: Curso (nombre=PRIMERO)
 
 ```mermaid
 classDiagram
+    direction TB
     class u2["<u>u2 : Usuario</u>"]{
-        nombre = "Sofia"
+        nombre = "Marco"
+        email = "marco.gil@mail.com"
+        contraseña = "marco2026"
+    }
+    class u1["<u>u1 : Usuario</u>"]{
+        nombre = "Sofía"
         email = "sofia.han@mail.com"
         contraseña = "sofii"
     }
-    class r1["<u>r1 : Reseña</u>"]{
-        puntuación=5
-        comentario = "muy buenos apuntes de ejercicios de CED"
-        fecha = "2025-11-01"
-    }
-    class r2["<u>r2 : Reseña</u>"]{
-        puntuación=5
-        comentario = "he comprobado el examen gracias a estos apuntes"
-        fecha = "2025-11-07"
+    class a1["<u>a1 : Apunte</u>"]{
+        título = "K-mapa"
+        descripción = "Apuntes de ejercicios de Circuitos Electrónicos Digitales"
+        fechaSubida = "2026-10-02"
+        archivo = "k_mapa.pdf"
+        añoAcadémico = "2026/27"
+        tipo = EJERCICIOS
     }
     class d1["<u>d1 : Descarga</u>"]{
-        fecha="2025-10-25"
+        fecha = "2026-10-25"
     }
-    class a2["<u>a2 : Apunte</u>"]{
-        título = "K-mapa"
-        descripción = "apuntes de Análisis y diseño de Circuitos Combinacionales"
-        fechaSubida = "2025-10-02"
-        archivo = "k_mapa.pdf"
-        añoAcademico="2025-2026"
-        TipoApunte = "EJERCICIOS" 
+    class r1["<u>r1 : Reseña</u>"]{
+        puntuación = 5
+        comentario = "Muy buenos apuntes de ejercicios de CED"
+        fecha = "2026-11-01"
     }
-    u2 -- r1
-    u2 -- d1
-    u2 ..> r2 : X intento Bloqueado (RN-02)
-    r1 -- a2
-    d1 -- a2
+    class as1["<u>as1 : Asignatura</u>"]{
+        código = 2050003
+        nombre = "Circuitos Electrónicos Digitales"
+        créditos = 6
+    }
+    class c1["<u>c1 : Curso</u>"]{
+        nombre = PRIMERO
+    }
 
+    u2 -- a1 : sube
+    u1 -- d1 : descarga
+    d1 -- a1 : descarga
+    u1 -- r1 : escribe
+    r1 -- a1 : valora
+    as1 -- a1 : tiene
+    c1 -- as1 : contiene
 
-    note "No se istancia la reseña debiod a la restrición de maximo una reseña per usuario por cada apunte"
-
-
+    note "El 3 de noviembre de 2026 Sofía intenta escribir una segunda reseña sobre a1. No se crea por la RN-02."
 ```
 ## 6. Matrices de trazabilidad
 

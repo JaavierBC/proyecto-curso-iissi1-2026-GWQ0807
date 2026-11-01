@@ -336,7 +336,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 Para validar el modelo, se definen estos escenarios de prueba con sus diagramas de objetos:   
 
-### ESCENARIO DE PRUEBA EP-01: Subida de apuntes con denuncias previas
+#### ESCENARIO DE PRUEBA EP-01: Subida de apuntes con denuncias previas
 
 Objetivo: Comprobar que un usuario con denuncias aceptadas por debajo del límite (RN-06) puede subir apuntes.
 
@@ -356,7 +356,7 @@ Objetos involucrados:
 
 ![EP-01_Diagrama_de_objetos](Assets/EP-01_Diagrama_de_objetos.png)
 
-### ESCENARIO DE PRUEBA EP-02: Reseña duplicada
+#### ESCENARIO DE PRUEBA EP-02: Reseña duplicada
 
 Objetivo: Comprobar que un usuario no puede escribir una segunda reseña sobre un apunte que ya ha reseñado (RN-02).
 
@@ -367,7 +367,7 @@ Objetos involucrados:
 - u2: Usuario (nombre="Marco", email="marco.gil@gmail.com", contraseña="marco2026")
 - a1: Apunte (título="K-mapa", descripción="Ejercicios de K-mapas resueltos", fechaSubida="2026-10-02", archivo="k_mapa.pdf", añoAcadémico="2026/27", tipo=EJERCICIOS)
 - d1: Descarga (fecha="2026-10-25")
-- r1: Reseña (puntuación=5, comentario="Buena selección de ejercicios y con soluciones bien explicadas", fecha="2026-11-01")
+- r1: Reseña (puntuación=5, comentario="Soluciones muy bien explicadas", fecha="2026-11-01")
 - as1: Asignatura (código=2050003, nombre="Circuitos Electrónicos Digitales", créditos=6)
 - c1: Curso (nombre=PRIMERO)
 
@@ -375,20 +375,7 @@ Objetos involucrados:
 
 ## 6. Matrices de trazabilidad
 
-- Requisitos Informacion
-
-|       | Usuario   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RI-3  |            | X          |            | X          |
-| RI-4  |            | X          |            | X          |
-| RI-5  |            | X          |            | X          |
-| RI-6  |            | X          |            | X          |
-| RI-7  |            | X          |            | X          |
-
-
-- Requisitos Funcionales
+### 6.1. Trazabilidad clases vs Requisitos Funcionales (RF)
 
 |       | Usuario   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
 |:------|:-----------|:-----------|:-----------|:-----------|
@@ -403,10 +390,19 @@ Objetos involucrados:
 | RF-9  | X          |            | X          | X          |
 | RF-10  | X          |            | X          | X          |
 
+### 6.2. Trazabilidad clases vs Requisitos de Información (RI)
 
+|       | Usuario   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
+|:------|:-----------|:-----------|:-----------|:-----------|
+| RI-1  | X          | X          | X          | X          |
+| RI-2  |            | X          |            | X          |
+| RI-3  |            | X          |            | X          |
+| RI-4  |            | X          |            | X          |
+| RI-5  |            | X          |            | X          |
+| RI-6  |            | X          |            | X          |
+| RI-7  |            | X          |            | X          |
 
-
-- Reglas Negocio
+### 6.3. Trazabilidad clases vs Reglas de Negocio (RN)
 
 |       | Usuario   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
 |:------|:-----------|:-----------|:-----------|:-----------|
@@ -416,7 +412,6 @@ Objetos involucrados:
 | RN-4  | X          | X          | X          |            |
 | RN-5  | X          | X          | X          |            |
 | RN-6  | X          | X          | X          |            |
-
 
 -- fin entregable 2 --
 

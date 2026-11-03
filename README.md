@@ -103,7 +103,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 ##### R.F.02. Listado de apuntes de una asignatura
 
 **Como** usuario,  
-**quiero** consultar los apuntes de una asignatura filtrándolos por tipo (teoría, ejercicios, exámenes...),  
+**quiero** consultar los apuntes de una asignatura filtrándolos por tipo (teoría, ejercicios, prácticas, exámenes o trabajos),  
 **para** acceder solo al material que necesito.  
 
 ##### R.F.03. Búsqueda de apuntes por palabra clave
@@ -140,7 +140,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 **Como** moderador,  
 **quiero** consultar el número total de denuncias aceptadas que tiene un usuario,  
-**para** saber qué usuario está consistentemente rompiendo las normas.  
+**para** saber qué usuario incumple las normas frecuentemente.  
 
 ##### R.F.09. Listado de denuncias pendientes
 
@@ -233,7 +233,6 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 
 **Como** administrador,  
 **quiero** conocer la siguiente información sobre los moderadores:  
-
 - El usuario que ejerce como moderador  
 - La fecha en la que fue nombrado moderador  
 - Las denuncias que ha revisado  
@@ -256,7 +255,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 **quiero** que un usuario solo pueda escribir una reseña por apunte,  
 **para** evitar que se manipule la valoración media.  
 
-**Pruebas de aceptación** 
+**Pruebas de aceptación**  
 - Un usuario que no ha realizado una reseña previa sobre un apunte escribe una y se crea sin problemas.
 - Ese mismo usuario intenta escribir una segunda reseña sobre el mismo apunte y recibe un mensaje de error.
 

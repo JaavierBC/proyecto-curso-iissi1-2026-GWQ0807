@@ -406,7 +406,7 @@ Objetos involucrados:
 | RI-4  |        |    X    |     X     |               |   X    |          |        |    X     |            |       |
 | RI-5  |        |    X    |           |               |   X    |    X     |        |          |            |       |
 | RI-6  |        |         |           |               |        |          |        |          |     X      |   X   |
-| RI-7  |   X    |    X    |     X     |       X       |        |          |        |          |            |       |
+| RI-7  |        |    X    |     X     |               |        |          |        |          |            |       |
 | RI-8  |        |    X    |     X     |               |        |          |        |    X     |            |       |
 
 ### 6.3. Trazabilidad clases vs Reglas de Negocio (RN)

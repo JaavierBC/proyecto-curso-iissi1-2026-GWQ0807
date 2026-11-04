@@ -382,43 +382,43 @@ Objetos involucrados:
 
 ### 6.1. Trazabilidad clases vs Requisitos Funcionales (RF)
 
-|       | Usuario    | Moderador  | Administrador  | Apunte | Descarga   | Reseña     | Denuncia   | Asignatura | Curso      |
-|:------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
-| RF-1  |            |            |            |            |            |            |            |     X      |     X      |
-| RF-2  |            |            |            |     X      |            |            |            |     X      |            |
-| RF-3  |     X      |            |            |     X      |            |            |            |            |            |
-| RF-4  |            |            |            |     x      |            |            |            |            |            |
-| RF-5  |            |            |            |     x      |            |     x      |            |            |            |
-| RF-6  |     x      |            |            |     x      |            |            |            |            |            |
-| RF-7  |     x      |            |            |            |     x      |            |            |            |            |
-| RF-8  |     x      |            |            |            |            |            |     x      |            |            |
-| RF-9  |            |            |            |     x      |            |            |     x      |            |            |
-| RF-10 |            |            |            |     x      |            |            |            |     x      |            |
-| RF-11 |            |     x      |            |            |            |            |     x      |            |            |
+|       | Cuenta | Usuario | Moderador | Administrador | Apunte | Descarga | Reseña | Denuncia | Asignatura | Curso |
+|:------|:-------|:--------|:----------|:--------------|:-------|:---------|:-------|:---------|:-----------|:------|
+| RF-1  |        |         |           |               |        |          |        |          |     X      |   X   |
+| RF-2  |        |         |           |               |   X    |          |        |          |     X      |       |
+| RF-3  |   X    |    X    |           |               |   X    |          |        |          |            |       |
+| RF-4  |        |         |           |               |   X    |    X     |   X    |          |     X      |       |
+| RF-5  |        |         |           |               |   X    |          |   X    |          |            |       |
+| RF-6  |        |    X    |           |               |   X    |          |        |          |            |       |
+| RF-7  |        |    X    |           |               |   X    |    X     |        |          |            |       |
+| RF-8  |        |    X    |           |               |   X    |          |        |    X     |            |       |
+| RF-9  |        |         |           |               |   X    |          |        |    X     |            |       |
+| RF-10 |        |         |           |               |   X    |          |        |          |     X      |       |
+| RF-11 |        |         |     X     |               |        |          |        |    X     |            |       |
 
 ### 6.2. Trazabilidad clases vs Requisitos de Información (RI)
 
-|       | Usuario    | Moderador  | Administrador  | Apunte | Descarga   | Reseña     | Denuncia   | Asignatura | Curso      |
-|:------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  |     x      |            |            |     x      |            |            |            |     x      |            |
-| RI-2  |            |            |            |            |            |            |            |     x      |     x      |
-| RI-3  |     x      |            |            |     x      |            |     x      |            |            |            |
-| RI-4  |     x      |     x      |            |     x      |            |            |     x      |            |            |
-| RI-5  |     x?     |            |            |     x      |            |            |            |            |            |
-| RI-6  |            |            |            |            |            |            |            |     x      |     x      |
-| RI-7  |     x      |     x      |     x      |            |            |            |            |            |            |
-| RI-8  |     x      |     x      |            |            |     x      |            |            |            |            |
+|       | Cuenta | Usuario | Moderador | Administrador | Apunte | Descarga | Reseña | Denuncia | Asignatura | Curso |
+|:------|:-------|:--------|:----------|:--------------|:-------|:---------|:-------|:---------|:-----------|:------|
+| RI-1  |        |    X    |           |               |   X    |          |        |          |     X      |       |
+| RI-2  |        |         |           |               |        |          |        |          |     X      |   X   |
+| RI-3  |        |    X    |           |               |   X    |          |   X    |          |            |       |
+| RI-4  |        |    X    |     X     |               |   X    |          |        |    X     |            |       |
+| RI-5  |        |    X    |           |               |   X    |    X     |        |          |            |       |
+| RI-6  |        |         |           |               |        |          |        |          |     X      |   X   |
+| RI-7  |   X    |    X    |     X     |       X       |        |          |        |          |            |       |
+| RI-8  |        |    X    |     X     |               |        |          |        |    X     |            |       |
 
 ### 6.3. Trazabilidad clases vs Reglas de Negocio (RN)
 
-|       | Usuario    | Moderador  | Administrador  | Apunte | Descarga   | Reseña     | Denuncia   | Asignatura | Curso      |
-|:------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
-| RN-1  |     x      |            |            |     x      |     x      |     x      |            |            |            |
-| RN-2  |     x      |            |            |     x      |            |     x      |            |            |            |
-| RN-3  |     x      |            |            |     x      |            |            |     x      |            |            |
-| RN-4  |            |            |            |     x      |            |            |     x      |            |            |
-| RN-5  |     x      |     x      |            |     x      |            |            |            |            |            |
-| RN-6  |     x      |            |            |     x      |            |            |     x      |            |            |
+|       | Cuenta | Usuario | Moderador | Administrador | Apunte | Descarga | Reseña | Denuncia | Asignatura | Curso |
+|:------|:-------|:--------|:----------|:--------------|:-------|:---------|:-------|:---------|:-----------|:------|
+| RN-1  |        |    X    |           |               |   X    |    X     |   X    |          |            |       |
+| RN-2  |        |    X    |           |               |   X    |          |   X    |          |            |       |
+| RN-3  |        |    X    |           |               |   X    |          |        |    X     |            |       |
+| RN-4  |        |    X    |           |               |   X    |          |        |    X     |            |       |
+| RN-5  |        |    X    |     X     |               |   X    |          |        |          |            |       |
+| RN-6  |        |    X    |           |               |   X    |          |        |    X     |            |       |
 
 -- fin entregable 2 --
 

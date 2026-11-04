@@ -317,13 +317,7 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 **quiero** que la disponibilidad del sistema sea lo más cercana posible a 24/7,  
 **para** poder consultar los apuntes a cualquier hora, especialmente en época de exámenes.  
 
-##### R.N.F.03. Privacidad de las descargas
-
-**Como** usuario,  
-**quiero** que mi historial de descargas solo pueda consultarlo yo y los moderadores,  
-**para** proteger mi privacidad.  
-
-##### R.N.F.04. Base de datos MariaDB
+##### R.N.F.03. Base de datos MariaDB
 
 **Como** administrador,  
 **quiero** que el sistema renovado siga funcionando sobre el servidor de base de datos MariaDB que utiliza actualmente la web,  

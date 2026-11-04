@@ -220,14 +220,14 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 - El curso: primero, segundo, tercero o cuarto   
 - Las asignaturas que lo componen  
 
-##### R.I.07. Información cuentas 
+##### R.I.07. Información usuarios
 
 **Como** administrador,  
-**quiero** disponer de la siguiente información sobre las cuentas:  
-- El nombre de la cuenta  
-- El email asociado  
+**quiero** disponer de la siguiente información sobre los usuarios del sistema:  
+- El nombre  
+- El email  
 - La contraseña de acceso  
-- El tipo de cuenta: usuario, moderador o administrador  
+- Si es moderador
 
 ##### R.I.08. Información moderadores
 
@@ -386,7 +386,7 @@ Objetos involucrados:
 |:------|:-------|:--------|:----------|:--------------|:-------|:---------|:-------|:---------|:-----------|:------|
 | RF-1  |        |         |           |               |        |          |        |          |     X      |   X   |
 | RF-2  |        |         |           |               |   X    |          |        |          |     X      |       |
-| RF-3  |   X    |    X    |           |               |   X    |          |        |          |            |       |
+| RF-3  |        |    X    |           |               |   X    |          |        |          |            |       |
 | RF-4  |        |         |           |               |   X    |    X     |   X    |          |     X      |       |
 | RF-5  |        |         |           |               |   X    |          |   X    |          |            |       |
 | RF-6  |        |    X    |           |               |   X    |          |        |          |            |       |
@@ -456,4 +456,4 @@ Se consideran todo tipo de constraints declarativas (aquellas definidas durante 
 
 ## Referencias
 
-
+[Wuolah](https://wuolah.com/us-escuela-tecnica-superior-ingenieria-informatica/grado-ingenieria-informatica-ingenieria-software)

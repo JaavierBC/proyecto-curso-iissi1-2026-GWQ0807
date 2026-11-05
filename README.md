@@ -388,7 +388,7 @@ Objetos involucrados:
 | RF-8  |        |    X    |           |               |   X    |          |        |    X     |            |       |
 | RF-9  |        |         |           |               |   X    |          |        |    X     |            |       |
 | RF-10 |        |         |           |               |   X    |          |        |          |     X      |       |
-| RF-11 |        |         |     X     |      x        |        |          |        |    X     |            |       |
+| RF-11 |        |         |     X     |      X        |        |          |        |    X     |            |       |
 
 ### 6.2. Trazabilidad clases vs Requisitos de Información (RI)
 
@@ -414,7 +414,8 @@ Objetos involucrados:
 | RN-5  |        |    X    |     X     |               |   X    |          |        |          |            |       |
 | RN-6  |        |    X    |           |               |   X    |          |        |    X     |            |       |
 
-Nota: Cuenta esta vacia al ser clase padre de usuario y administrador, los requisitos se refieren a estos mas que a la cuenta.
+Nota: Cuenta está vacía al ser clase padre de usuario y administrador. Los requisitos se refieren a estos más que a la cuenta.  
+
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN

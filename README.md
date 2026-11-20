@@ -323,8 +323,6 @@ Es el responsable de la gestión de la plataforma. No es un usuario que suba o d
 **quiero** que el sistema renovado siga funcionando sobre el servidor de base de datos MariaDB que utiliza actualmente la web,  
 **para** aprovechar la infraestructura existente y evitar migraciones innecesarias.
 
--- fin entregable 1 --
-
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
@@ -416,18 +414,83 @@ Objetos involucrados:
 
 Nota: Cuenta está vacía al ser clase padre de usuario y administrador. Los requisitos se refieren a estos más que a la cuenta.  
 
--- fin entregable 2 --
-
 ## 7. Modelo relacional en 3FN
 
-- Relaciones obtenidas al aplicar la transformación del modelo conceptual.
+```
+Cuentas(cuentaId, nombre, email, contraseña)
+    PK(cuentaId)
+    AK(email)
 
-### 7.1.  Justificación de la estrategia de transformación de jerarquías
+Usuarios(cuentaId)
+    PK(cuentaId)
+    FK(cuentaId)/Cuentas
 
-- si se identificaron jerarquías en el MC.
+Administradores(cuentaId)
+    PK(cuentaId)
+    FK(cuentaId)/Cuentas
+
+Moderadores(cuentaId, fechaNombramiento)
+    PK(cuentaId)
+    FK(cuentaId)/Usuarios
+
+Cursos(cursoId, nombre)
+    PK(cursoId)
+    AK(nombre)
+
+Asignaturas(asignaturaId, cursoId, código, nombre, créditos)
+    PK(asignaturaId)
+    AK(código)
+    FK(cursoId)/Cursos
+
+Apuntes(apunteId, asignaturaId, autorId, título, descripción, fechaSubida, archivo, añoAcadémico, tipo)
+    PK(apunteId)
+    FK(asignaturaId)/Asignaturas
+    FK(autorId)/Usuarios
+
+Descargas(descargaId, descargadorId, apunteId, fecha)
+    PK(descargaId)
+    AK(descargadorId, apunteId)
+    FK(descargadorId)/Usuarios
+    FK(apunteId)/Apuntes
+
+Reseñas(reseñaId, apunteId, usuarioId, puntuación, comentario, fecha)
+    PK(reseñaId)
+    AK(usuarioId, apunteId)
+    FK(apunteId)/Apuntes
+    FK(usuarioId)/Usuarios
+
+Denuncias(denunciaId, apunteId, usuarioId, moderadorId, motivo, fecha, estado)
+    PK(denunciaId)
+    AK(usuarioId, apunteId)
+    FK(apunteId)/Apuntes
+    FK(usuarioId)/Usuarios
+    FK(moderadorId)/Moderadores
+```
+![Modelo Relacional](Assets/Modelo_Relacional_ApuntUS.png)
+
+### 7.1. Justificación de la estrategia de transformación de jerarquías
+
+En el modelo conceptual hay dos jerarquías: Cuenta, con las subclases Usuario y Administrador (completa y disjunta), y Usuario, con la subclase Moderador (incompleta). En ambas hemos usado la estrategia de una relación para cada clase. Cada subclase tiene como clave primaria la misma que su superclase, y esa clave es además clave ajena hacia ella. Por ejemplo, `Usuarios` tiene `cuentaId` como PK y como FK hacia `Cuentas`, y `Moderadores` tiene `cuentaId` como PK y como FK hacia `Usuarios`.
+
+La principal ventaja es que las claves ajenas del resto de relaciones pueden apuntar directamente a la clase que corresponde. `Apuntes`, `Descargas`, `Reseñas` y `Denuncias` referencian a `Usuarios`, así que un administrador no puede subir, descargar, reseñar ni denunciar apuntes. De la misma manera, `Denuncias.moderadorId` referencia a `Moderadores`, y solo un moderador puede revisar una denuncia. Además, los datos comunes (`nombre`, `email` y `contraseña`) están una sola vez en `Cuentas`, con el email como clave alternativa, y `fechaNombramiento` solo existe para los moderadores, por lo que la jerarquía no introduce valores nulos.
+
+Las otras dos estrategias no nos convencían por estos motivos:
+
+- Con una relación por cada subclase concreta habría que repetir `nombre`, `email` y `contraseña` en varias tablas, y no se podría evitar que un mismo email esté en dos de ellas. Además, las claves ajenas que van a usuarios tendrían que apuntar a más de una tabla, y una clave ajena solo puede apuntar a una.
+- Con una única relación para toda la jerarquía, `fechaNombramiento` sería nulo en casi todas las filas. Y tampoco podríamos asegurar con claves ajenas que quien sube un apunte es un usuario o que quien revisa una denuncia es un moderador, así que haría falta un trigger en cada una de esas tablas.
+
+La estrategia que hemos elegido tiene un inconveniente: la base de datos no puede comprobar por sí sola que una cuenta no sea usuario y administrador a la vez. Lo controlaremos con triggers en `Usuarios` y `Administradores`. También hay que hacer una unión con `Cuentas` para consultar el nombre o el email de un usuario.
+
+### Tercera forma normal
+
+Todas las relaciones están en 3FN.
+
+- **1FN:** todos los atributos son atómicos y no hay grupos repetidos.
+- **2FN:** todas las claves primarias tienen un solo atributo. En `Descargas`, `Reseñas` y `Denuncias` hay además una clave alternativa compuesta formada por el usuario y el apunte (`usuarioId` y `apunteId`, o `descargadorId` y `apunteId` en `Descargas`). En ellas, los atributos que no forman parte de ninguna clave (`fecha`, `puntuación`, `comentario`, `motivo`, `estado` y `moderadorId`) dependen de la pareja completa y no de uno solo de sus atributos, por lo que no hay dependencias parciales.
+- **3FN:** en todas las relaciones los determinantes son claves candidatas, y no hay dependencias transitivas. Por ejemplo, el curso de un apunte no se guarda en `Apuntes`, porque `apunteId` → `asignaturaId` → `cursoId` sería una dependencia transitiva. El curso se obtiene a través de `Asignaturas`.
 
 
-### 8. Matriz de trazabilidad MC/SQL (opcional):
+## 8. Matriz de trazabilidad MC/SQL:
 
 - Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)
 - Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3
@@ -448,7 +511,6 @@ Nota: Cuenta está vacía al ser clase padre de usuario y administrador. Los req
 | CONST-4 |        |        | X      |        |
 
 Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE).
--- fin entregable 3 --
 
 ## Referencias
 

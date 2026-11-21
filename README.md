@@ -492,9 +492,6 @@ Todas las relaciones están en 3FN.
 
 ## 8. Matriz de trazabilidad MC/SQL:
 
-- Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)
-- Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3
-
 |                | Cuenta | Usuario | Moderador | Administrador | Apunte | Descarga | Reseña | Denuncia | Asignatura | Curso |
 |:---------------|:-------|:--------|:----------|:--------------|:-------|:---------|:-------|:---------|:-----------|:------|
 | Cuentas        |   x    |         |           |               |        |          |        |          |            |       |
@@ -514,7 +511,6 @@ Todas las relaciones están en 3FN.
 | TRIG-1  (RN-4)       |        |    X    |           |               |   X    |          |        |    X     |            |       |
 | TRIG-2/CONST-5 (RN-6)|        |    X    |           |               |   X    |          |        |    X     |            |       |
 
-Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE).
 
 ## Referencias
 

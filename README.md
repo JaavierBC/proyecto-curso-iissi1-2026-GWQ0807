@@ -495,20 +495,24 @@ Todas las relaciones están en 3FN.
 - Restricciones sobre el MC / Elementos del modelo tecnológico (SQL) (Triggers, checks, etc.)
 - Incluir Reglas de negocio — Constraints/Triggers en las matrices de trazabilidad para el entregable 3
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:-------|:-------|:-------|:-------|:-------|
-| TABLA-1 |        |        |        |        |
-| TABLA-2 |        |        |        |        |
-| TABLA-3 |        |        |        |        |
-| TABLA-4 |        |        |        |        |
-| TRIG-1 |        |        |        |        |
-| TRIG-2 | X      | X      |        | X      |
-| TRIG-3 |        | X      |        | X      |
-| TRIG-4 |        |        | X      |        |
-| CONST-1 |        |        |        |        |
-| CONST-2 | X      | X      |        | X      |
-| CONST-3 |        | X      |        | X      |
-| CONST-4 |        |        | X      |        |
+|                | Cuenta | Usuario | Moderador | Administrador | Apunte | Descarga | Reseña | Denuncia | Asignatura | Curso |
+|:---------------|:-------|:--------|:----------|:--------------|:-------|:---------|:-------|:---------|:-----------|:------|
+| Cuentas        |   x    |         |           |               |        |          |        |          |            |       |
+| Usuarios       |        |   x     |           |               |        |          |        |          |            |       |
+| Moderadores    |        |         |    x      |               |        |          |        |          |            |       |
+| Administrador  |        |         |           |      x        |        |          |        |          |            |       |
+| Apuntes        |        |         |           |               |   x    |          |        |          |            |       |
+| Descargas      |        |         |           |               |        |    x     |        |          |            |       |
+| Reseñas        |        |         |           |               |        |          |   x    |          |            |       |
+| Denuncias      |        |         |           |               |        |          |        |    x     |            |       |
+| Asignaturas    |        |         |           |               |        |          |        |          |     x      |       |
+| Cursos         |        |         |           |               |        |          |        |          |            |   x   |
+| CONST-1 (RN-1)       |        |    X    |           |               |   X    |    X     |   X    |          |            |       |
+| CONST-2 (RN-2)       |        |    X    |           |               |   X    |          |   X    |          |            |       |
+| CONST-3 (RN-3)       |        |    X    |           |               |   X    |          |        |    X     |            |       |
+| CONST-4 (RN-5)       |        |    X    |     X     |               |   X    |          |        |          |            |       |
+| TRIG-1  (RN-4)       |        |    X    |           |               |   X    |          |        |    X     |            |       |
+| TRIG-2/CONST-5 (RN-6)|        |    X    |           |               |   X    |          |        |    X     |            |       |
 
 Se consideran todo tipo de constraints declarativas (aquellas definidas durante el CREATE TABLE).
 

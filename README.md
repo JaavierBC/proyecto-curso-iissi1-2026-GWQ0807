@@ -479,7 +479,7 @@ Las otras dos estrategias no nos convencían por estos motivos:
 - Con una relación por cada subclase concreta habría que repetir `nombre`, `email` y `contraseña` en varias tablas, y no se podría evitar que un mismo email esté en dos de ellas. Además, las claves ajenas que van a usuarios tendrían que apuntar a más de una tabla, y una clave ajena solo puede apuntar a una.
 - Con una única relación para toda la jerarquía, `fechaNombramiento` sería nulo en casi todas las filas. Y tampoco podríamos asegurar con claves ajenas que quien sube un apunte es un usuario o que quien revisa una denuncia es un moderador, así que haría falta un trigger en cada una de esas tablas.
 
-La estrategia que hemos elegido tiene un inconveniente: la base de datos no puede comprobar por sí sola que una cuenta no sea usuario y administrador a la vez. Lo controlaremos con triggers en `Usuarios` y `Administradores`. También hay que hacer una unión con `Cuentas` para consultar el nombre o el email de un usuario.
+La estrategia que hemos elegido tiene un inconveniente: la base de datos no puede comprobar por sí sola que una cuenta no sea usuario y administrador a la vez ni que no sea ninguno de los dos. Lo controlaremos con triggers en `Usuarios` y `Administradores`. También hay que hacer una combinación con `Cuentas` para consultar el nombre o el email de un usuario.
 
 ### Tercera forma normal
 
@@ -487,7 +487,7 @@ Todas las relaciones están en 3FN.
 
 - **1FN:** todos los atributos son atómicos y no hay grupos repetidos.
 - **2FN:** todas las claves primarias tienen un solo atributo. En `Descargas`, `Reseñas` y `Denuncias` hay además una clave alternativa compuesta formada por el usuario y el apunte (`usuarioId` y `apunteId`, o `descargadorId` y `apunteId` en `Descargas`). En ellas, los atributos que no forman parte de ninguna clave (`fecha`, `puntuación`, `comentario`, `motivo`, `estado` y `moderadorId`) dependen de la pareja completa y no de uno solo de sus atributos, por lo que no hay dependencias parciales.
-- **3FN:** en todas las relaciones los determinantes son claves candidatas, y no hay dependencias transitivas. Por ejemplo, el curso de un apunte no se guarda en `Apuntes`, porque `apunteId` → `asignaturaId` → `cursoId` sería una dependencia transitiva. El curso se obtiene a través de `Asignaturas`.
+- **3FN:** ningún atributo que no forme parte de una clave candidata depende de otro atributo que tampoco forme parte de ella, así que no hay dependencias transitivas. Por ejemplo, el curso de un apunte no se guarda en `Apuntes`, porque `apunteId` → `asignaturaId` → `cursoId` sería una dependencia transitiva. El curso se obtiene a través de `Asignaturas`.
 
 
 ## 8. Matriz de trazabilidad MC/SQL:
